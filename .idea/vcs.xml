@@ -2,9 +2,5 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/MyShopCommon" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/MyShopWebParent" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/MyShopWebParent/MyShopBackend" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend" vcs="Git" />
   </component>
 </project>

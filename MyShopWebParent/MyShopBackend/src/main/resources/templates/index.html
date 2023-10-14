@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="https://www.thymeleaf.org">
-<head th:replace="fragments :: head('Admin home')"></head>
+<head th:replace="fragments :: head('Admin home','none')"></head>
 <body>
 <div th:replace="navigation :: content('none',false)"></div>
 
 <div  class="image-container">
-    <img src="https://images.unsplash.com/photo-1580639613257-5b1a20fe3760?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3391&q=80" class="bg-intro-admin">
+    <img th:src="@{/images/welcome_to.gif}" style="object-fit: contain;width: 100%;height: 954px">
 </div>
 
 <footer th:replace="fragments::footer"></footer>

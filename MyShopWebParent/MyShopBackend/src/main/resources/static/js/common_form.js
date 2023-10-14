@@ -5,7 +5,6 @@ $(document).ready(function () {
         entityNameId = $(this).attr(entityNameID);
         link = $(this).attr("href");
         $('#btn-confirm').attr("href",link);
-        console.log( $('#btn-confirm').attr("href"))
         showModalOption("Confirmation","Do you want to delete this "+entityName+" with id: " + entityNameId);
     })
     $('#btn-cancel').on('click',function () {

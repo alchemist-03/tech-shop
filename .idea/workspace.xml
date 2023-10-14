@@ -4,199 +4,200 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="377d3ae7-3cd0-42a8-acb0-7e40f972d135" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopCommon/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopCommon/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopCommon/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopCommon/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopCommon/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopCommon/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopCommon/src/main/java/com/myshop/common/entity/Brand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopCommon/src/main/java/com/myshop/common/entity/Category.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopCommon/src/main/java/com/myshop/common/entity/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopCommon/src/main/java/com/myshop/common/entity/Role.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopCommon/src/main/java/com/myshop/common/entity/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopCommon/src/main/java/com/myshop/common/exception/BrandNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopCommon/src/main/java/com/myshop/common/exception/CategoryNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopCommon/src/main/java/com/myshop/common/exception/UserNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopCommon/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/brands-logo/10/png-clipart-acer-logo-laptop-acer-aspire-computer-logo-lenovo-logo-electronics-text.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/brands-logo/5/canon-logo-canon-icon-free-free-vector.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/brands-logo/6/Sony-logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/brands-logo/7/01-nvidia-logo-horiz-500x200-2c50-p@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/brands-logo/8/xiaomi-logo.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/brands-logo/9/Asus-Logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/java/com/myshop/admin/FileUploadUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/java/com/myshop/admin/MainController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/java/com/myshop/admin/MyShopBackendApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/java/com/myshop/admin/WebMvcConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/java/com/myshop/admin/brand/BrandController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/java/com/myshop/admin/brand/BrandRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/java/com/myshop/admin/brand/BrandService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/java/com/myshop/admin/category/CategoryController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/java/com/myshop/admin/category/CategoryRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/java/com/myshop/admin/category/CategoryRestController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/java/com/myshop/admin/category/CategoryService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/java/com/myshop/admin/category/PageCategoryInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/java/com/myshop/admin/export/AbstractExporter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/java/com/myshop/admin/export/BrandExportToEXCEL.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/java/com/myshop/admin/export/CategoryExportToCSV.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/java/com/myshop/admin/export/CategoryExportToEXCEL.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/java/com/myshop/admin/export/UserExportToCSV.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/java/com/myshop/admin/export/UserExportToEXCEL.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/java/com/myshop/admin/security/MyShopUserDetails.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/java/com/myshop/admin/security/MyShopUserDetailsService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/java/com/myshop/admin/security/WebSecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/java/com/myshop/admin/user/AccountController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/java/com/myshop/admin/user/RoleRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/java/com/myshop/admin/user/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/java/com/myshop/admin/user/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/java/com/myshop/admin/user/UserRestController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/java/com/myshop/admin/user/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/resources/static/css/main.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/resources/static/fontawesome/css/all.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/resources/static/fontawesome/css/all.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/resources/static/fontawesome/js/all.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/resources/static/fontawesome/js/brands.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/resources/static/fontawesome/js/brands.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/resources/static/fontawesome/js/conflict-detection.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/resources/static/fontawesome/js/conflict-detection.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/resources/static/fontawesome/js/fontawesome.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/resources/static/fontawesome/js/fontawesome.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/resources/static/fontawesome/js/regular.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/resources/static/fontawesome/js/regular.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/resources/static/fontawesome/js/solid.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/resources/static/fontawesome/js/solid.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/resources/static/fontawesome/js/v4-shims.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/resources/static/fontawesome/js/v4-shims.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/resources/static/images/favicon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/resources/static/images/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/resources/static/images/no-image.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/resources/static/images/slides/slide1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/resources/static/images/slides/slide2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/resources/static/images/slides/slide3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/resources/static/images/user-default.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/resources/static/js/common.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/resources/static/js/common_form.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/resources/static/webfonts/fa-brands-400.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/resources/static/webfonts/fa-brands-400.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/resources/static/webfonts/fa-regular-400.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/resources/static/webfonts/fa-regular-400.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/resources/static/webfonts/fa-solid-900.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/resources/static/webfonts/fa-solid-900.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/resources/static/webfonts/fa-v4compatibility.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/resources/static/webfonts/fa-v4compatibility.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/resources/templates/brands/brand_form.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/resources/templates/brands/brands.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/resources/templates/categories/categories.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/resources/templates/categories/category_form.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/resources/templates/error/403.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/resources/templates/error/404.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/resources/templates/error/500.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/resources/templates/fragments.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/resources/templates/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/resources/templates/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/resources/templates/navigation.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/resources/templates/users/account_form.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/resources/templates/users/user_form.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/resources/templates/users/users.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/test/java/com/myshop/admin/BrandRepositoryTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/test/java/com/myshop/admin/CategoryRepositoryTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/test/java/com/myshop/admin/RoleRepositoryTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/test/java/com/myshop/admin/UserRepositoryTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/users-photo/1/images.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/users-photo/10/Frederick Santos.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/users-photo/12/Satya Narayana.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/users-photo/13/Matthew.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/users-photo/14/Dave Kumar.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/users-photo/15/Jack Bruce.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/users-photo/16/Mohamed Zirri.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/users-photo/18/Ali Raza.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/users-photo/19/Isaac Henry.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/users-photo/20/Svetlana Stasovska.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/users-photo/21/Mike Gates.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/users-photo/22/Pedro Quintero.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/users-photo/3/Bruce Kitchell.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/users-photo/4/Muhammad Evran.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/users-photo/6/Alfred.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/users-photo/7/Nathi_Sangweni.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/users-photo/9/Bill Feeny.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/java/com/myshop/site/MainController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/java/com/myshop/site/MyShopFrontendApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/resources/static/css/main.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/resources/static/images/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/resources/static/images/slides/slide1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/resources/static/images/slides/slide2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/resources/static/images/slides/slide3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/resources/templates/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/resources/templates/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/resources/templates/product/order.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/resources/templates/product/product_detail.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/resources/templates/product/products_by_category.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/resources/templates/registrer.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/test/java/com/myshop/site/MyShopFrontendApplicationTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/categories-photo/1/electronics.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/categories-photo/10/digital cameras.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/categories-photo/11/flashes.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/categories-photo/12/lenses.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/categories-photo/13/tripods_monopods.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/categories-photo/14/carrier cellphones.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/categories-photo/15/unlocked cellphones.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/categories-photo/16/cellphone accessories.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/categories-photo/17/cables and adapters.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/categories-photo/18/microsd cards.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/categories-photo/19/cellphone_stands.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/categories-photo/2/camera.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/categories-photo/20/cellphone cases.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/categories-photo/21/headphones.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/categories-photo/22/computer processors.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/categories-photo/23/graphic cards.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/categories-photo/24/internal hard drive.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/categories-photo/25/internal optical drives.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/categories-photo/26/power supplies.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/categories-photo/27/solid state drives.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/categories-photo/28/sound cards.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/categories-photo/29/computer memory.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/categories-photo/3/computers.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/categories-photo/30/motherboards.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/categories-photo/31/network cards.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/categories-photo/34/mouse.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/categories-photo/35/keyboard.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/categories-photo/4/cellphones.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/categories-photo/5/desktop computers.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/categories-photo/6/laptop computers.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/categories-photo/7/tablets.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/categories-photo/8/computer components.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/categories-photo/9/bags_cases.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/mydb.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+    <list default="true" id="377d3ae7-3cd0-42a8-acb0-7e40f972d135" name="Changes" comment="push first">
+      <change afterPath="$PROJECT_DIR$/.idea/JPAMappingSettings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopCommon/src/main/java/com/myshop/common/AmazonS3Util.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopCommon/src/main/java/com/myshop/common/Constants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopCommon/src/main/java/com/myshop/common/entity/CartItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopCommon/src/main/java/com/myshop/common/entity/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopCommon/src/main/java/com/myshop/common/entity/ProductDetail.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopCommon/src/main/java/com/myshop/common/entity/ProductImage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopCommon/src/main/java/com/myshop/common/entity/Setting.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopCommon/src/main/java/com/myshop/common/entity/SettingBag.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopCommon/src/main/java/com/myshop/common/entity/SettingCategory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopCommon/src/main/java/com/myshop/common/exception/CustomerNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopCommon/src/main/java/com/myshop/common/exception/ProductNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopCommon/src/main/java/com/myshop/common/exception/ShoppingCartMaxQuantityExceeded.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopCommon/src/test/java/AmazonS3UtilTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopCommon/src/test/java/Employee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopCommon/src/test/java/ProcessInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopCommon/src/test/java/test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/brands-logo/21/tech21logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/java/com/myshop/admin/customer/CustomerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/java/com/myshop/admin/customer/CustomerRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/java/com/myshop/admin/customer/CustomerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/java/com/myshop/admin/export/CustomerExportToCSV.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/java/com/myshop/admin/export/CustomerExportToEXCEL.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/java/com/myshop/admin/export/ProductExportToCSV.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/java/com/myshop/admin/export/ProductExportToEXCEL.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/java/com/myshop/admin/setting/SettingController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/java/com/myshop/admin/setting/SettingFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/java/com/myshop/admin/setting/SettingRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/java/com/myshop/admin/setting/SettingService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/resources/static/css/richtext.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/resources/static/images/welcome_to.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/resources/static/js/jquery.richtext.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/resources/static/js/product_form.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/resources/templates/customers/customer_form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/resources/templates/customers/customers.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/resources/templates/error/400.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/resources/templates/products/description_section.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/resources/templates/products/description_section_readonly.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/resources/templates/products/details_section.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/resources/templates/products/details_section_readonly.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/resources/templates/products/images_section.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/resources/templates/products/images_section_readonly.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/resources/templates/products/modal_product_details.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/resources/templates/products/overview_section_readonly.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/resources/templates/products/product_form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/resources/templates/products/products.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/resources/templates/settings/general_section.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/resources/templates/settings/mail_server_section.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/resources/templates/settings/mail_template_section.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/resources/templates/settings/settings.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/test/java/com/myshop/admin/PasswordEncoderTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/test/java/com/myshop/admin/SettingRepositoryTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/java/com/myshop/site/FileUploadUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/java/com/myshop/site/Utility.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/java/com/myshop/site/WebMvcConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/java/com/myshop/site/category/CategoryController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/java/com/myshop/site/category/CategoryRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/java/com/myshop/site/category/CategoryService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/java/com/myshop/site/customer/CustomerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/java/com/myshop/site/customer/CustomerRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/java/com/myshop/site/customer/CustomerRestController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/java/com/myshop/site/customer/CustomerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/java/com/myshop/site/product/ProductController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/java/com/myshop/site/product/ProductRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/java/com/myshop/site/product/ProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/java/com/myshop/site/security/CustomerUserDetail.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/java/com/myshop/site/security/CustomerUserDetailService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/java/com/myshop/site/security/WebSecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/java/com/myshop/site/setting/EmailSettingBag.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/java/com/myshop/site/setting/SettingFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/java/com/myshop/site/setting/SettingRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/java/com/myshop/site/setting/SettingService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/java/com/myshop/site/shoppingcart/CartItemRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/java/com/myshop/site/shoppingcart/ShoppingCartController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/java/com/myshop/site/shoppingcart/ShoppingCartRestController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/java/com/myshop/site/shoppingcart/ShoppingCartService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/resources/static/css/richtext.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/resources/static/fontawesome/css/all.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/resources/static/fontawesome/css/all.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/resources/static/fontawesome/js/all.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/resources/static/fontawesome/js/brands.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/resources/static/fontawesome/js/brands.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/resources/static/fontawesome/js/conflict-detection.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/resources/static/fontawesome/js/conflict-detection.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/resources/static/fontawesome/js/fontawesome.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/resources/static/fontawesome/js/fontawesome.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/resources/static/fontawesome/js/regular.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/resources/static/fontawesome/js/regular.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/resources/static/fontawesome/js/solid.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/resources/static/fontawesome/js/solid.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/resources/static/fontawesome/js/v4-shims.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/resources/static/fontawesome/js/v4-shims.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/resources/static/images/background-tech-for-project.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/resources/static/images/bg-tech-for-project.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/resources/static/images/favicon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/resources/static/images/no-image.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/resources/static/images/user-default.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/resources/static/js/add_to_cart.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/resources/static/js/common.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/resources/static/js/common_form.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/resources/static/js/jquery.richtext.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/resources/static/js/number_format.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/resources/static/js/product_form.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/resources/static/js/shopping_cart.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/resources/static/webfonts/fa-brands-400.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/resources/static/webfonts/fa-brands-400.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/resources/static/webfonts/fa-regular-400.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/resources/static/webfonts/fa-regular-400.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/resources/static/webfonts/fa-solid-900.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/resources/static/webfonts/fa-solid-900.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/resources/static/webfonts/fa-v4compatibility.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/resources/static/webfonts/fa-v4compatibility.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/resources/templates/customers/account_form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/resources/templates/customers/registration_success.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/resources/templates/customers/verify_fail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/resources/templates/customers/verify_success.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/resources/templates/error/400.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/resources/templates/error/403.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/resources/templates/error/404.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/resources/templates/error/500.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/resources/templates/fragments.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/resources/templates/navigation.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/resources/templates/products/search_products.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/test/java/com/myshop/site/CartItemRepositoryTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/test/java/com/myshop/site/CustomerRepositoryTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopWebParent/customers-photo/10/download.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopWebParent/customers-photo/8/download.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopWebParent/products-photos/15/extras/61pAGybm0AL._AC_SL1500_.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopWebParent/products-photos/15/extras/7192rNX4N9L._AC_SL1500_.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopWebParent/products-photos/15/main.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopWebParent/products-photos/16/extras/7170Zw0wixL._AC_SL1500_.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopWebParent/products-photos/16/extras/71wHUA0z8tL._AC_SL1500_.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopWebParent/products-photos/16/extras/81Ixb6WucHL._AC_SL1500_.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopWebParent/products-photos/16/extras/81a63G8m7YL._AC_SL1500_.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopWebParent/products-photos/16/extras/91M+TT-6b5L._AC_SL1500_.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopWebParent/products-photos/16/main.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyShopWebParent/site-logo/logo2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyShopCommon/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MyShopCommon/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyShopCommon/src/main/java/com/myshop/common/entity/Brand.java" beforeDir="false" afterPath="$PROJECT_DIR$/MyShopCommon/src/main/java/com/myshop/common/entity/Brand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyShopCommon/src/main/java/com/myshop/common/entity/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/MyShopCommon/src/main/java/com/myshop/common/entity/Category.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyShopCommon/src/main/java/com/myshop/common/entity/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/MyShopCommon/src/main/java/com/myshop/common/entity/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyShopCommon/src/main/java/com/myshop/common/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/MyShopCommon/src/main/java/com/myshop/common/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/java/com/myshop/admin/FileUploadUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/java/com/myshop/admin/FileUploadUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/java/com/myshop/admin/MyShopBackendApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/java/com/myshop/admin/MyShopBackendApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/java/com/myshop/admin/WebMvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/java/com/myshop/admin/WebMvcConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/java/com/myshop/admin/brand/BrandController.java" beforeDir="false" afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/java/com/myshop/admin/brand/BrandController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/java/com/myshop/admin/brand/BrandRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/java/com/myshop/admin/brand/BrandRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/java/com/myshop/admin/brand/BrandService.java" beforeDir="false" afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/java/com/myshop/admin/brand/BrandService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/java/com/myshop/admin/category/CategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/java/com/myshop/admin/category/CategoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/java/com/myshop/admin/category/CategoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/java/com/myshop/admin/category/CategoryRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/java/com/myshop/admin/category/CategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/java/com/myshop/admin/category/CategoryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/java/com/myshop/admin/export/BrandExportToEXCEL.java" beforeDir="false" afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/java/com/myshop/admin/export/BrandExportToEXCEL.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/java/com/myshop/admin/export/CategoryExportToEXCEL.java" beforeDir="false" afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/java/com/myshop/admin/export/CategoryExportToEXCEL.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/java/com/myshop/admin/export/UserExportToCSV.java" beforeDir="false" afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/java/com/myshop/admin/export/UserExportToCSV.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/java/com/myshop/admin/export/UserExportToEXCEL.java" beforeDir="false" afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/java/com/myshop/admin/export/UserExportToEXCEL.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/java/com/myshop/admin/security/MyShopUserDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/java/com/myshop/admin/security/MyShopUserDetails.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/java/com/myshop/admin/security/MyShopUserDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/java/com/myshop/admin/security/MyShopUserDetailsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/java/com/myshop/admin/security/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/java/com/myshop/admin/security/WebSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/java/com/myshop/admin/user/AccountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/java/com/myshop/admin/user/AccountController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/java/com/myshop/admin/user/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/java/com/myshop/admin/user/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/java/com/myshop/admin/user/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/java/com/myshop/admin/user/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/resources/static/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/resources/static/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/resources/static/js/common_form.js" beforeDir="false" afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/resources/static/js/common_form.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/resources/templates/brands/brand_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/resources/templates/brands/brand_form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/resources/templates/brands/brands.html" beforeDir="false" afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/resources/templates/brands/brands.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/resources/templates/categories/categories.html" beforeDir="false" afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/resources/templates/categories/categories.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/resources/templates/categories/category_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/resources/templates/categories/category_form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/resources/templates/fragments.html" beforeDir="false" afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/resources/templates/fragments.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/resources/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/resources/templates/navigation.html" beforeDir="false" afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/resources/templates/navigation.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/resources/templates/users/account_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/resources/templates/users/account_form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/resources/templates/users/user_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/resources/templates/users/user_form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/resources/templates/users/users.html" beforeDir="false" afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/resources/templates/users/users.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/java/com/myshop/site/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/java/com/myshop/site/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/java/com/myshop/site/MyShopFrontendApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/java/com/myshop/site/MyShopFrontendApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/resources/static/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/resources/static/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/resources/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/resources/templates/product/order.html" beforeDir="false" afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/resources/templates/cart/shopping_cart.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/resources/templates/product/product_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/resources/templates/products/product_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/resources/templates/product/products_by_category.html" beforeDir="false" afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/resources/templates/products/products_by_category.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/resources/templates/registrer.html" beforeDir="false" afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/resources/templates/customers/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/test/java/com/myshop/site/MyShopFrontendApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyShopWebParent/categories-photo/34/mouse.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyShopWebParent/categories-photo/35/keyboard.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/brands-logo/16/keyboard.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyShopWebParent/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MyShopWebParent/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -210,14 +211,27 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="JavaScript File" />
         <option value="Interface" />
+        <option value="JavaScript File" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/MyShopCommon" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="39f5dd47-f7a4-4941-a24f-603e85913318" />
+        <option name="url" value="https://github.com/alchemist-03/tech-shop.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -250,15 +264,16 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/workspace/java/MyShop/MyShopWebParent/MyShopBackend/src/main/resources/templates&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/workspace/java/MyShop/MyShopWebParent/MyShopFrontend/src/main/resources/templates/customers&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;advanced.settings&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.completion&quot;,
     &quot;spring.configuration.checksum&quot;: &quot;c5e7f535e80aa3d2f3bc9d4aa9d16269&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
@@ -269,21 +284,26 @@
       <recent name="com.myshop.admin.category" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\workspace\java\MyShop\MyShopWebParent\MyShopFrontend\src\main\resources\templates\customers" />
+      <recent name="D:\workspace\java\MyShop\MyShopWebParent\MyShopBackend\src\main\resources\templates\customers" />
       <recent name="D:\workspace\java\MyShop\MyShopWebParent\MyShopBackend\src\main\resources\templates" />
-      <recent name="D:\workspace\java\MyShop\MyShopWebParent\categories-photo" />
-      <recent name="D:\workspace\java\MyShop\MyShopWebParent\MyShopBackend\src\main\resources\templates\users" />
-      <recent name="D:\workspace\java\MyShop\MyShopWebParent\MyShopBackend\users-photo" />
-      <recent name="D:\workspace\java\MyShop\MyShopWebParent\MyShopBackend\src\main\resources\static\fontawesome" />
+      <recent name="D:\workspace\java\MyShop\MyShopWebParent\MyShopBackend\src\main\resources\templates\settings" />
+      <recent name="D:\workspace\java\MyShop\MyShopWebParent\MyShopFrontend\src\main\java\com\myshop\site\security" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\workspace\java\MyShop\MyShopWebParent\MyShopBackend\src\main\resources\static\images" />
-      <recent name="D:\workspace\java\MyShop\MyShopWebParent\MyShopBackend\src\main\resources\static" />
-      <recent name="D:\workspace\java\MyShop\MyShopWebParent\MyShopBackend\src\main\resources\static\fontawesome\js" />
-      <recent name="D:\workspace\java\MyShop\MyShopWebParent\MyShopBackend\src\main\resources\templates" />
-      <recent name="D:\workspace\java\MyShop\MyShopWebParent\MyShopFrontend\src\main\resources\static\assets\css" />
+      <recent name="D:\workspace\java\MyShop\MyShopWebParent\MyShopFrontend\src\main\resources\templates\cart" />
+      <recent name="D:\workspace\java\MyShop\MyShopWebParent\MyShopFrontend\src\main\resources\static\images" />
+      <recent name="D:\workspace\java\MyShop\MyShopCommon\src\test\java" />
+      <recent name="D:\workspace\java\MyShop\MyShopWebParent\MyShopBackend\src\main\resources\static\css" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.myshop.site" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.myshop.admin.export" />
+      <recent name="com.myshop.site" />
+      <recent name="com.myshop.admin.setting" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -294,81 +314,61 @@
     </option>
   </component>
   <component name="RunManager" selected="Spring Boot.MyShopBackendApplication">
-    <configuration name="BrandRepositoryTests.addSomeCategoriesToBrand" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="MyShopBackend" />
+    <configuration name="Constants" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.myshop.common.Constants" />
+      <module name="MyShopCommon" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.myshop.admin.*" />
+          <option name="PATTERN" value="com.myshop.common.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.myshop.admin" />
-      <option name="MAIN_CLASS_NAME" value="com.myshop.admin.BrandRepositoryTests" />
-      <option name="METHOD_NAME" value="addSomeCategoriesToBrand" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="main" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="main" />
+      <module name="MyShopCommon" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AmazonS3UtilTests.testDeleteFile" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MyShopCommon" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="AmazonS3UtilTests" />
+      <option name="METHOD_NAME" value="testDeleteFile" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BrandRepositoryTests.createNewBrand" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="MyShopBackend" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.myshop.admin.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.myshop.admin" />
-      <option name="MAIN_CLASS_NAME" value="com.myshop.admin.BrandRepositoryTests" />
-      <option name="METHOD_NAME" value="createNewBrand" />
+    <configuration name="AmazonS3UtilTests.testListFolder" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MyShopCommon" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="AmazonS3UtilTests" />
+      <option name="METHOD_NAME" value="testListFolder" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CategoryRepositoryTests.testCreateFirstCategory" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="MyShopBackend" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.myshop.admin.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.myshop.admin" />
-      <option name="MAIN_CLASS_NAME" value="com.myshop.admin.CategoryRepositoryTests" />
-      <option name="METHOD_NAME" value="testCreateFirstCategory" />
+    <configuration name="AmazonS3UtilTests.testRemoveFolder" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MyShopCommon" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="AmazonS3UtilTests" />
+      <option name="METHOD_NAME" value="testRemoveFolder" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CategoryRepositoryTests.testCreateSubCategories" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="MyShopBackend" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.myshop.admin.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.myshop.admin" />
-      <option name="MAIN_CLASS_NAME" value="com.myshop.admin.CategoryRepositoryTests" />
-      <option name="METHOD_NAME" value="testCreateSubCategories" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CategoryRepositoryTests.testCreateSuperSubCategories" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="MyShopBackend" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.myshop.admin.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.myshop.admin" />
-      <option name="MAIN_CLASS_NAME" value="com.myshop.admin.CategoryRepositoryTests" />
-      <option name="METHOD_NAME" value="testCreateSuperSubCategories" />
+    <configuration name="AmazonS3UtilTests.testUploadFile" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MyShopCommon" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="AmazonS3UtilTests" />
+      <option name="METHOD_NAME" value="testUploadFile" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -385,26 +385,28 @@
     <configuration name="MyShopFrontendApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="MyShopFrontend" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.myshop.site.MyShopFrontendApplication" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/MyShopWebParent/MyShopFrontend" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.BrandRepositoryTests.addSomeCategoriesToBrand" />
-      <item itemvalue="JUnit.BrandRepositoryTests.createNewBrand" />
-      <item itemvalue="JUnit.CategoryRepositoryTests.testCreateFirstCategory" />
-      <item itemvalue="JUnit.CategoryRepositoryTests.testCreateSubCategories" />
-      <item itemvalue="JUnit.CategoryRepositoryTests.testCreateSuperSubCategories" />
+      <item itemvalue="Application.main" />
+      <item itemvalue="Application.Constants" />
+      <item itemvalue="JUnit.AmazonS3UtilTests.testDeleteFile" />
+      <item itemvalue="JUnit.AmazonS3UtilTests.testRemoveFolder" />
+      <item itemvalue="JUnit.AmazonS3UtilTests.testUploadFile" />
+      <item itemvalue="JUnit.AmazonS3UtilTests.testListFolder" />
       <item itemvalue="Spring Boot.MyShopBackendApplication" />
       <item itemvalue="Spring Boot.MyShopFrontendApplication" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.BrandRepositoryTests.addSomeCategoriesToBrand" />
-        <item itemvalue="JUnit.BrandRepositoryTests.createNewBrand" />
-        <item itemvalue="JUnit.CategoryRepositoryTests.testCreateFirstCategory" />
-        <item itemvalue="JUnit.CategoryRepositoryTests.testCreateSuperSubCategories" />
-        <item itemvalue="JUnit.CategoryRepositoryTests.testCreateSubCategories" />
+        <item itemvalue="JUnit.AmazonS3UtilTests.testRemoveFolder" />
+        <item itemvalue="JUnit.AmazonS3UtilTests.testUploadFile" />
+        <item itemvalue="JUnit.AmazonS3UtilTests.testDeleteFile" />
+        <item itemvalue="JUnit.AmazonS3UtilTests.testListFolder" />
+        <item itemvalue="Application.Constants" />
       </list>
     </recent_temporary>
   </component>
@@ -428,8 +430,49 @@
       <workItem from="1695176853651" duration="6099000" />
       <workItem from="1695186408418" duration="3411000" />
       <workItem from="1695202188786" duration="752000" />
-      <workItem from="1695204723028" duration="6867000" />
+      <workItem from="1695204723028" duration="21749000" />
+      <workItem from="1695301715848" duration="10551000" />
+      <workItem from="1695564860556" duration="2134000" />
+      <workItem from="1695641009550" duration="12150000" />
+      <workItem from="1695724727080" duration="14888000" />
+      <workItem from="1695807802414" duration="18161000" />
+      <workItem from="1695832557919" duration="48000" />
+      <workItem from="1695871498107" duration="3011000" />
+      <workItem from="1695874881878" duration="16300000" />
+      <workItem from="1695902413752" duration="14123000" />
+      <workItem from="1695960498711" duration="9873000" />
+      <workItem from="1695994449749" duration="4550000" />
+      <workItem from="1696048368607" duration="29261000" />
+      <workItem from="1696136703465" duration="10310000" />
+      <workItem from="1696253415608" duration="6672000" />
+      <workItem from="1696305116817" duration="1598000" />
+      <workItem from="1696338338097" duration="4000" />
+      <workItem from="1696338445603" duration="7828000" />
+      <workItem from="1696389897234" duration="6191000" />
+      <workItem from="1696423730176" duration="10548000" />
+      <workItem from="1696506495726" duration="6607000" />
+      <workItem from="1696607694536" duration="1874000" />
+      <workItem from="1696609619688" duration="6328000" />
+      <workItem from="1696784082624" duration="2438000" />
+      <workItem from="1696787476523" duration="2357000" />
+      <workItem from="1696855286795" duration="11053000" />
+      <workItem from="1696905280725" duration="11616000" />
+      <workItem from="1696948753989" duration="9516000" />
+      <workItem from="1697008858345" duration="1870000" />
+      <workItem from="1697016841899" duration="1371000" />
+      <workItem from="1697192253672" duration="2971000" />
+      <workItem from="1697200073191" duration="59000" />
+      <workItem from="1697200164393" duration="11723000" />
+      <workItem from="1697278933047" duration="970000" />
     </task>
+    <task id="LOCAL-00001" summary="push first">
+      <created>1695215767212</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1695215767212</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -440,7 +483,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="SHOW_ROOT_NAMES" value="true" />
+            </State>
           </value>
         </entry>
       </map>
@@ -448,24 +493,22 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/MyShopCommon" />
+      <path value="$PROJECT_DIR$/MyShopWebParent" />
+      <path value="$PROJECT_DIR$/MyShopWebParent/MyShopBackend" />
+      <path value="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend" />
+    </ignored-roots>
+    <MESSAGE value="push first" />
+    <option name="LAST_COMMIT_MESSAGE" value="push first" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/java/com/myshop/admin/user/UserService.java</url>
-          <line>110</line>
+          <line>112</line>
           <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/java/com/myshop/admin/user/AccountController.java</url>
-          <line>34</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/java/com/myshop/admin/user/AccountController.java</url>
-          <line>41</line>
-          <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/java/com/myshop/admin/user/UserService.java</url>
@@ -474,20 +517,49 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/java/com/myshop/admin/user/UserController.java</url>
-          <line>129</line>
+          <line>132</line>
           <option name="timeStamp" value="13" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/java/com/myshop/admin/category/CategoryController.java</url>
-          <line>87</line>
+          <line>92</line>
           <option name="timeStamp" value="14" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/java/com/myshop/admin/user/UserController.java</url>
-          <line>132</line>
+          <line>136</line>
           <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/java/com/myshop/admin/product/ProductController.java</url>
+          <line>134</line>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/java/com/myshop/admin/product/ProductService.java</url>
+          <line>51</line>
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/java/com/myshop/admin/customer/CustomerController.java</url>
+          <line>80</line>
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/java/com/myshop/site/shoppingcart/ShoppingCartService.java</url>
+          <line>23</line>
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/java/com/myshop/site/shoppingcart/ShoppingCartService.java</url>
+          <line>25</line>
+          <option name="timeStamp" value="30" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

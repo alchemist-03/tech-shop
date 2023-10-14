@@ -29,4 +29,6 @@ public interface CategoryRepository extends PagingAndSortingRepository<Category,
 
     Category findByName(String name);
     Category findByAlias(String alias);
+
+
 }

@@ -17,7 +17,7 @@ public class CategoryExportToEXCEL extends AbstractExporter{
         workbook = new XSSFWorkbook();
     }
     public void writeHeaderLine() {
-        sheet = workbook.createSheet();
+        sheet = workbook.createSheet("Categories");
         XSSFRow row = sheet.createRow(0);
         XSSFCellStyle cellStyle = workbook.createCellStyle();
         XSSFFont font = workbook.createFont();

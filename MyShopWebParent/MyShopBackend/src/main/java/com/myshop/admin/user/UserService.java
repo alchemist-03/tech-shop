@@ -51,6 +51,8 @@ public class UserService {
             }else {
                 encodePassword(user);
             }
+        }else {
+            encodePassword(user);
         }
 
         return userRepository.save(user);

@@ -174,8 +174,16 @@ ul {
 
 }
 
+.form--xxl {
+    max-width: 930px;
+
+}
+
 .form--sm {
     max-width: 400px;
+}
+.form-control::placeholder {
+    color: #c7bfbf;
 }
 
 .form-heading {
@@ -253,6 +261,9 @@ ul {
 .action-edit {
     color: #a49b9b;
 }
+.action-view-detail{
+    color: var(--myfavourite-color);
+}
 
 .btn-green {
     color: #46ce20;
@@ -283,6 +294,22 @@ ul {
     margin-left: 10px;
     color: var(--myfavourite-color);
     font-size: 14px;
+}
+
+.image-wrapper {
+    border: 1px solid gray;
+    padding: 16px;
+    border-radius: 8px ;
+    width: 400px;
+    min-height: 400px;
+    text-align: center;
+    margin-right: 30px;
+}
+.img-thumb--xl {
+    width: 300px;
+    height: 300px;
+    object-fit: contain;
+    max-width: 100%;
 }
 
 
@@ -332,6 +359,13 @@ ul {
     }
     .pagination li {
         margin-top: 10px;
+    }
+    .img-thumb {
+        object-fit: contain;
+    }
+    .image-wrapper {
+        margin-right:0px;
+        width: 330px;
     }
 }
 

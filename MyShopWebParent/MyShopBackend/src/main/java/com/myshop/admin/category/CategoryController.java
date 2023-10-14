@@ -6,6 +6,7 @@ import com.myshop.admin.export.CategoryExportToEXCEL;
 import com.myshop.admin.export.UserExportToCSV;
 import com.myshop.admin.export.UserExportToEXCEL;
 import com.myshop.admin.user.UserService;
+import com.myshop.common.AmazonS3Util;
 import com.myshop.common.entity.Category;
 import com.myshop.common.entity.Role;
 import com.myshop.common.entity.User;
@@ -72,7 +73,11 @@ public class CategoryController {
     public String editCategory(Model model, @PathVariable("id") Integer id, RedirectAttributes redirectAttributes) {
         try {
             Category category = categoryService.get(id);
+            List<Category> categories = categoryService.listHierarchicalUseInForm();
+
             model.addAttribute("category", category);
+            model.addAttribute("categories",categories);
+
             model.addAttribute("pageTitle", "Edit category with id: " + id);
 
             return "categories/category_form";
@@ -84,8 +89,11 @@ public class CategoryController {
     @GetMapping("/delete/{id}")
     public String deleteCategory(@PathVariable("id") Integer id, RedirectAttributes redirectAttributes) {
         try {
-            String uploadDir = "../categories-photo/" + id;
-            FileUploadUtils.cleanDir(uploadDir);
+            String dir = "categories-photo/" + id;
+//            FileUploadUtils.cleanDir(uploadDir);
+//            FileUploadUtils.deleteDir(uploadDir);
+            AmazonS3Util.removeFolder(dir);
+
             categoryService.deleteCategory(id);
             redirectAttributes.addFlashAttribute("message_success", "The category has been deleted successfully");
         } catch (CategoryNotFoundException ex) {
@@ -101,14 +109,16 @@ public class CategoryController {
     public String saveBrand(@ModelAttribute("category") Category category,
                            @RequestParam("fileImage") MultipartFile multipartFile,
                            RedirectAttributes redirectAttributes
-    ) {
+    ) throws IOException {
         if (!multipartFile.isEmpty()) {
             String fileName = multipartFile.getOriginalFilename();
             category.setImage(fileName);
             Category savedCategory = categoryService.saveCategory(category);
-            String uploadDir = "../categories-photo/" + savedCategory.getId();
-            FileUploadUtils.cleanDir(uploadDir);
-            FileUploadUtils.saveFile(uploadDir, fileName, multipartFile);
+            String uploadDir = "categories-photo/" + savedCategory.getId();
+            AmazonS3Util.removeFolder(uploadDir);
+            AmazonS3Util.uploadFile(uploadDir,fileName,multipartFile.getInputStream());
+//            FileUploadUtils.cleanDir(uploadDir);
+//            FileUploadUtils.saveFile(uploadDir, fileName, multipartFile);
         } else {
 
             categoryService.saveCategory(category);

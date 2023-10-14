@@ -1,5 +1,7 @@
 package com.myshop.common.entity;
 
+import com.myshop.common.Constants;
+
 import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
@@ -10,7 +12,7 @@ public class Brand {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-
+    @Column(length = 64,nullable = false,unique = true)
     private String name;
     private String logo;
 
@@ -72,6 +74,6 @@ public class Brand {
     @Transient
     public String getImagePath() {
         if(logo == null) return "/images/no-image.jpg";
-        return "/brands-logo/"+id + "/" + logo;
+        return Constants.AWS_BASE_URI +"/brands-logo/"+id + "/" + logo;
     }
 }

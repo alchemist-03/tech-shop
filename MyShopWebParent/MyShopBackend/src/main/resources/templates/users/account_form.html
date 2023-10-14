@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="https://www.thymeleaf.org">
-<head th:replace="fragments :: head(${pageTitle})"></head>
+<head th:replace="fragments :: head(${pageTitle},'none')"></head>
 <body class="bg-main">
-<div th:replace="navigation :: content('/users',true)"></div>
+<div th:replace="navigation :: content('/users',false)"></div>
 
 <div class="container">
 

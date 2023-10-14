@@ -1,7 +1,10 @@
 package com.myshop.common.entity;
 
+import com.myshop.common.Constants;
+
 import javax.persistence.*;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.Set;
 
 @Entity
@@ -123,11 +126,21 @@ public class User {
     @Transient
     public String getImagePath() {
         if (photo == null) return "/images/user-default.jpg";
-        return "/users-photo/" + id + "/" + photo;
+        return Constants.AWS_BASE_URI +  "/users-photo/" + id + "/" + photo;
     }
 
     @Transient
     public String getFullName() {
         return firstName + " " + lastName;
+    }
+
+    public boolean hasRole(String roleName) {
+        Iterator<Role> roleIterator = roles.iterator();
+        while(roleIterator.hasNext()) {
+            if(roleIterator.next().getName().equals(roleName)) {
+                return true;
+            }
+        }
+        return false;
     }
 }

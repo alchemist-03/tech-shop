@@ -45,4 +45,19 @@ public class BrandService {
     public List<Brand> listAll() {
             return (List<Brand>) brandRepository.findAll();
     }
+
+
+    public boolean isUniqueBrand(Integer id,String name) {
+        Brand brandByName = brandRepository.findByName(name);
+        if(brandByName== null) return true;
+        if(id==null) {
+            return false;
+        }else {
+            if(brandByName.getId()!=id) {
+                return false;
+            }
+        }
+
+        return true;
+    }
 }

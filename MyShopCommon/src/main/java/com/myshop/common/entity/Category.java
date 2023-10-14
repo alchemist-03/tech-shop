@@ -1,5 +1,7 @@
 package com.myshop.common.entity;
 
+import com.myshop.common.Constants;
+
 import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
@@ -22,8 +24,12 @@ public class Category {
     private Category parent;
 
     @OneToMany(mappedBy = "parent")
-
+    @OrderBy(value = "name asc")
     private Set<Category> children = new HashSet<>();
+
+    @Column(name = "all_parent_ids",length = 256)
+    private String allParentIDs;
+
 
     public Category() {
     }
@@ -47,6 +53,7 @@ public class Category {
         copyCate.setEnabled(category.isEnabled());
         copyCate.setParent(category.getParent());
         copyCate.setChildren(category.getChildren() );
+        copyCate.setHasChildren(category.getChildren().size() >0 );
         return copyCate;
     }
     public static Category CopyFull(Category category,String name) {
@@ -114,6 +121,33 @@ public class Category {
     @Transient
     public String getImagePath() {
         if(image==null) return "/images/no-image.jpg";
-        return "/categories-photo/"+id + "/" + image;
+        return Constants.AWS_BASE_URI +"/categories-photo/"+id + "/" + image;
+    }
+    @Transient
+    private boolean hasChildren;
+
+    public boolean isHasChildren() {
+        return hasChildren;
+    }
+
+    public void setHasChildren(boolean hasChildren) {
+        this.hasChildren = hasChildren;
+    }
+
+    public String getAllParentIDs() {
+        return allParentIDs;
+    }
+
+    public void setAllParentIDs(String allParentIDs) {
+        this.allParentIDs = allParentIDs;
+    }
+
+    @Override
+    public String toString() {
+        return "Category{" +
+                "name='" + name + '\'' +
+                ", imagePath='" + getImagePath() + '\'' +
+                ", enabled=" + enabled +
+                '}';
     }
 }

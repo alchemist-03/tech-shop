@@ -75,4 +75,10 @@ public class MyShopUserDetails implements UserDetails {
     public void setAvatar (String imageUrl) {
         user.setPhoto(imageUrl);
     }
+
+    public User getUser() {return user;}
+
+    public boolean hasRole(String roleName) {
+        return user.hasRole(roleName    );
+    }
 }

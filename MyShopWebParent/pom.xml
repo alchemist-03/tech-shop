@@ -19,8 +19,16 @@
     </properties>
     <modules>
         <module>MyShopBackend</module>
+        <module>MyShopFrontend</module>
     </modules>
+
+
+
+
+
     <dependencies>
+
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
@@ -49,6 +57,8 @@
             <scope>runtime</scope>
             <optional>true</optional>
         </dependency>
+
+
 
         <dependency>
             <groupId>com.mysql</groupId>

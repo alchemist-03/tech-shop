@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="https://www.thymeleaf.org">
-<head th:fragment="head(pageTitle)">
+<head th:fragment="head(pageTitle,remove)" th:remove="${remove}">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>[[${pageTitle}]]</title>
+    <title>[[${pageTitle}]] - [[${SITE_NAME}]]</title>
     <link rel="icon" th:href="@{/images/favicon.png}" type="image/png">
     <link rel="stylesheet" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}">
     <link rel="stylesheet" th:href="@{/fontawesome/css/all.css}">
@@ -67,7 +67,7 @@
 
 
 <footer th:fragment="footer" class="footer">
-    <p class="text-center"> &copy; 2023 My Shop Copyright All Rights Reserved</p>
+    <p class="text-center" th:utext="${COPYRIGHT}"> </p>
 </footer>
 
 <!-- Modal -->

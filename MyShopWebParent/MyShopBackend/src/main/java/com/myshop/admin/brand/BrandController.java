@@ -4,6 +4,7 @@ import com.myshop.admin.FileUploadUtils;
 import com.myshop.admin.category.CategoryService;
 import com.myshop.admin.export.BrandExportToEXCEL;
 import com.myshop.admin.export.CategoryExportToEXCEL;
+import com.myshop.common.AmazonS3Util;
 import com.myshop.common.entity.Brand;
 import com.myshop.common.entity.Category;
 import com.myshop.common.exception.BrandNotFoundException;
@@ -91,14 +92,16 @@ public class BrandController {
     public String saveBrand(@ModelAttribute("brand") Brand brand,
                             @RequestParam("fileImage") MultipartFile multipartFile,
                             RedirectAttributes redirectAttributes
-    ) {
+    ) throws IOException {
         if (!multipartFile.isEmpty()) {
             String fileName = multipartFile.getOriginalFilename();
             brand.setLogo(fileName);
             Brand savedBrand = brandService.save(brand);
-            String uploadDir = "./brands-logo/" + savedBrand.getId();
-            FileUploadUtils.cleanDir(uploadDir);
-            FileUploadUtils.saveFile(uploadDir, fileName, multipartFile);
+            String uploadDir = "brands-logo/" + savedBrand.getId();
+//            FileUploadUtils.cleanDir(uploadDir);
+//            FileUploadUtils.saveFile(uploadDir, fileName, multipartFile);
+            AmazonS3Util.removeFolder(uploadDir);
+            AmazonS3Util.uploadFile(uploadDir,fileName,multipartFile.getInputStream());
         } else {
 
             brandService.save(brand);
@@ -111,9 +114,8 @@ public class BrandController {
     @GetMapping("/delete/{id}")
     public String deleteCategory(@PathVariable("id") Integer id, RedirectAttributes redirectAttributes) {
         try {
-            String dir = "./brands-logo/" + id;
-            FileUploadUtils.cleanDir(dir);
-            FileUploadUtils.deleteDir(dir);
+            String dir = "brands-logo/" + id;
+            AmazonS3Util.removeFolder(dir);
             brandService.deleteBrand(id);
             redirectAttributes.addFlashAttribute("message_success", "The brand has been deleted successfully");
         } catch (BrandNotFoundException ex) {

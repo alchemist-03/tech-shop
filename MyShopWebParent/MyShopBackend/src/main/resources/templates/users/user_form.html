@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="https://www.thymeleaf.org">
-<head th:replace="fragments :: head(${pageTitle})"></head>
+<head th:replace="fragments :: head(${pageTitle},'none')"></head>
 <body class="bg-main">
-<div th:replace="navigation :: content('/users',true)"></div>
+<div th:replace="navigation :: content('/users',false)"></div>
 
 <div class="container">
 
@@ -50,9 +50,9 @@
             <label for="password" class="form-label">Avatar:</label>
             <input type="file" class="form-control" id="thumb" name="fileImage"  >
 
-            <divc class="img_thumb-container">
+            <div class="img_thumb-container">
                 <img th:src="@{${user.imagePath}}" alt="preview avatar" class="img-thumb" id="image-thumb">
-            </divc>
+            </div>
         </div>
 
 

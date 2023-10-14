@@ -1,5 +1,6 @@
 package com.myshop.admin.category;
 
+import com.myshop.common.entity.Brand;
 import com.myshop.common.entity.Category;
 import com.myshop.common.exception.CategoryNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,6 +20,7 @@ public class CategoryService {
     @Autowired private CategoryRepository categoryRepository;
 
     public List<Category> listByPage(PageCategoryInfo pageInfo, int pageNum, String sortField, String sortDir, String keyword) {
+
         Sort sort = Sort.by(sortField);
         sort = sortDir.equals("asc") ? sort.ascending() : sort.descending();
         Pageable pageable = PageRequest.of(pageNum - 1,ROOT_CATEGORIES_PER_PAGE,sort);
@@ -103,8 +105,14 @@ public class CategoryService {
                 .orElseThrow(() -> new CategoryNotFoundException("Couldn't find any category with id = " + id));
     }
     public Category saveCategory(Category category) {
+        Category parent = category.getParent();
+        if(parent!=null) {
+            String allParentIDs = parent.getAllParentIDs() == null ? "-" : parent.getAllParentIDs();
+            allParentIDs+= parent.getId() + "-";
+            category.setAllParentIDs(allParentIDs );
+        }
 
-        return categoryRepository.save(category);
+          return categoryRepository.save(category);
     }
 
 
@@ -137,4 +145,6 @@ public class CategoryService {
         }
             return "OK";
     }
+
+
 }

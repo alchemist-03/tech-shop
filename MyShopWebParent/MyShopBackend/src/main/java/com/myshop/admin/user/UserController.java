@@ -3,6 +3,7 @@ package com.myshop.admin.user;
 import com.myshop.admin.FileUploadUtils;
 import com.myshop.admin.export.UserExportToCSV;
 import com.myshop.admin.export.UserExportToEXCEL;
+import com.myshop.common.AmazonS3Util;
 import com.myshop.common.entity.Role;
 import com.myshop.common.entity.User;
 import com.myshop.common.exception.UserNotFoundException;
@@ -93,14 +94,16 @@ public class UserController {
     public String saveUser(@ModelAttribute("user") User user,
                            @RequestParam("fileImage") MultipartFile multipartFile,
                            RedirectAttributes redirectAttributes
-    ) {
+    ) throws IOException {
         if (!multipartFile.isEmpty()) {
             String fileName = multipartFile.getOriginalFilename();
             user.setPhoto(fileName);
             User savedUser = userService.saveUser(user);
-            String uploadDir = "./users-photo/" + savedUser.getId();
-            FileUploadUtils.cleanDir(uploadDir);
-            FileUploadUtils.saveFile(uploadDir, fileName, multipartFile);
+            String uploadDir = "users-photo/" + savedUser.getId();
+//            FileUploadUtils.cleanDir(uploadDir);
+//            FileUploadUtils.saveFile(uploadDir, fileName, multipartFile);
+            AmazonS3Util.removeFolder(uploadDir);
+            AmazonS3Util.uploadFile(uploadDir,fileName,multipartFile.getInputStream());
         } else {
             if (user.getPhoto().isEmpty()) {
                 user.setPhoto(null);
@@ -126,9 +129,10 @@ public class UserController {
     @GetMapping("/delete/{id}")
     public String deleteUser(@PathVariable("id") Integer id, RedirectAttributes redirectAttributes) {
         try {
-            String uploadDir = "./users-photo/" + id;
-            FileUploadUtils.cleanDir(uploadDir);
-            FileUploadUtils.deleteDir(uploadDir);
+            String dir = "users-photo/" + id;
+//            FileUploadUtils.cleanDir(uploadDir);
+//            FileUploadUtils.deleteDir(uploadDir);
+            AmazonS3Util.removeFolder(dir);
             userService.deleteUser(id);
             redirectAttributes.addFlashAttribute("message_success", "The user has been deleted successfully");
         } catch (UserNotFoundException ex) {

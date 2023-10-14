@@ -2,6 +2,7 @@ package com.myshop.admin.user;
 
 import com.myshop.admin.FileUploadUtils;
 import com.myshop.admin.security.MyShopUserDetails;
+import com.myshop.common.AmazonS3Util;
 import com.myshop.common.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.AuthenticatedPrincipal;
@@ -11,6 +12,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+
+import java.io.IOException;
 
 @Controller
 @RequestMapping("/account")
@@ -31,14 +34,16 @@ public class AccountController {
                            @AuthenticationPrincipal MyShopUserDetails loggedUser,
                            @RequestParam("fileImage") MultipartFile multipartFile,
                            RedirectAttributes redirectAttributes
-    ) {
+    ) throws IOException {
         if (!multipartFile.isEmpty()) {
             String fileName = multipartFile.getOriginalFilename();
             user.setPhoto(fileName);
             User savedUser = userService.saveAccount(user);
-            String uploadDir = "./users-photo/" + savedUser.getId();
-            FileUploadUtils.cleanDir(uploadDir);
-            FileUploadUtils.saveFile(uploadDir, fileName, multipartFile);
+            String uploadDir = "users-photo/" + savedUser.getId();
+//            FileUploadUtils.cleanDir(uploadDir);
+//            FileUploadUtils.saveFile(uploadDir, fileName, multipartFile);
+            AmazonS3Util.removeFolder(uploadDir);
+            AmazonS3Util.uploadFile(uploadDir,fileName,multipartFile.getInputStream());
         } else {
             if (user.getPhoto().isEmpty()) {
                 user.setPhoto(null);

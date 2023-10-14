@@ -1,6 +1,6 @@
  <!DOCTYPE html>
 <html lang="en"  xmlns:th="https://www.thymeleaf.org">
-<head th:replace="fragments:: head('Category management')">
+<head th:replace="fragments:: head('Category management','none')">
 </head>
 <body >
 
@@ -49,7 +49,7 @@
                    <a style="text-decoration: none" th:href="@{'/categories/' + ${category.id} + '/enabled/'+${!category.enabled}}" th:class="${category.enabled ? 'fa-regular fa-circle-check btn-green' : 'fa-regular fa-circle-xmark btn-red'}" > </a>
                <td>
                    <a th:href="@{'/categories/edit/' + ${category.id}}" title="edit this category"><i class="fa-solid fa-file-pen action-edit"></i></a> &nbsp;&nbsp;
-                   <a th:href="@{'/categories/delete/' + ${category.id}}"  title="delete this category" th:categoryId="${category.id}" class="btn-delete"><i class="fa-regular fa-trash-can action-delete" ></i></a>
+                   <a th:if="${!category.hasChildren}" th:href="@{'/categories/delete/' + ${category.id}}"  title="delete this category" th:categoryId="${category.id}" class="btn-delete"><i class="fa-regular fa-trash-can action-delete" ></i></a>
                </td>
            </tr>
 

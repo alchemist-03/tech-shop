@@ -30,17 +30,21 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
-//                .antMatchers("/users/**","/settings/**").hasAuthority("Admin")
-                .antMatchers("/categories/**","/brands/**").hasAnyAuthority("Admin","Editor")
-                .antMatchers("/products/**").hasAnyAuthority("Admin","Editor","Salesperson","Shipper")
-                .antMatchers("/products/**").hasAnyAuthority("Admin","Editor","Salesperson","Shipper")
-                .antMatchers("/customers/**","/orders/**").hasAnyAuthority("Admin","Salesperson")
+                .antMatchers("/users/**", "/settings/**").hasAuthority("Admin")
+
+
+                .antMatchers( "/products/edit/**", "/products/save","/brands/{brandId}/categories").hasAnyAuthority("Admin", "Editor", "Salesperson")
+                .antMatchers("/products","/products/", "/products/page/**", "/products/{id}/view_detail").hasAnyAuthority("Admin", "Editor", "Salesperson", "Shipper")
+                .antMatchers( "/products/new", "/products/delete/**").hasAnyAuthority("Admin", "Editor")
+                .antMatchers("/products/**").hasAnyAuthority("Admin", "Editor")
+                .antMatchers("/customers/**", "/orders/**").hasAnyAuthority("Admin", "Salesperson")
+                .antMatchers("/categories/**", "/brands/**").hasAnyAuthority("Admin", "Editor")
                 .anyRequest().authenticated()
 
                 .and()
-                .formLogin().loginPage("/login").usernameParameter("email").defaultSuccessUrl("/",true).permitAll()
+                .formLogin().loginPage("/login").usernameParameter("email").defaultSuccessUrl("/", true).permitAll()
                 .and().logout()
-                .and().rememberMe().tokenValiditySeconds(7*24*60*60).key("abcdakljsdlflsajfl");
+                .and().rememberMe().tokenValiditySeconds(7 * 24 * 60 * 60).key("abcdakljsdlflsajfl");
     }
 
     public DaoAuthenticationProvider authenticationProvider() {
@@ -57,6 +61,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     public void configure(WebSecurity web) throws Exception {
-        web.ignoring().antMatchers("/webjars/**","/css/**");
+        web.ignoring().antMatchers("/webjars/**", "/css/**");
     }
 }

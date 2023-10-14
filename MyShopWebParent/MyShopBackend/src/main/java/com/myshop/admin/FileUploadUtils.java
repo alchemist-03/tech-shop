@@ -27,7 +27,7 @@ public class FileUploadUtils {
     }
 
     public static void cleanDir(String dirName) {
-        Path path = Paths.get(dirName.replace("../","./"));
+        Path path = Paths.get(dirName);
         try {
             Files.list(path).forEach(file -> {
                 if (!Files.isDirectory(file)) {
