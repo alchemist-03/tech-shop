@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="377d3ae7-3cd0-42a8-acb0-7e40f972d135" name="Changes" comment="push first">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/java/com/myshop/site/customer/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/java/com/myshop/site/customer/CustomerController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,7 +122,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.MyShopBackendApplication">
+  <component name="RunManager" selected="Spring Boot.MyShopFrontendApplication">
     <configuration name="Constants" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.myshop.common.Constants" />
       <module name="MyShopCommon" />
@@ -275,6 +276,7 @@
       <workItem from="1697386517547" duration="595000" />
       <workItem from="1697546319053" duration="868000" />
       <workItem from="1697549467387" duration="624000" />
+      <workItem from="1697554367605" duration="557000" />
     </task>
     <task id="LOCAL-00001" summary="push first">
       <created>1695215767212</created>

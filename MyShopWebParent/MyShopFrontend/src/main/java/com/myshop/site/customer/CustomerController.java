@@ -41,15 +41,15 @@ public class CustomerController {
     @PostMapping("/customers/create_new")
     public String  register(@RequestParam("fileImage") MultipartFile multipartFile,
                             @ModelAttribute("customer") Customer customer,
-                            HttpServletRequest servletRequest) throws MessagingException, UnsupportedEncodingException {
+                            HttpServletRequest servletRequest) throws MessagingException, IOException {
         if(!multipartFile.isEmpty()) {
             String fileName = StringUtils.cleanPath(multipartFile.getOriginalFilename());
             customer.setImage(fileName);
             Customer savedCustomer = customerService.save(customer);
             sendVerificationEmail(servletRequest,customer);
-            String uploadDir = "../customers-photo/" + savedCustomer.getId();
-            FileUploadUtils.cleanDir(uploadDir);
-            FileUploadUtils.saveFile(uploadDir,fileName,multipartFile);
+            String uploadDir = "customers-photo/" + savedCustomer.getId();
+            AmazonS3Util.removeFolder(uploadDir);
+            AmazonS3Util.uploadFile(uploadDir,fileName,multipartFile.getInputStream());
 
         }else {
             if(customer.getImage().isEmpty()) {
