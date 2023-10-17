@@ -1,5 +1,6 @@
 package com.myshop.site.customer;
 
+import com.myshop.common.AmazonS3Util;
 import com.myshop.common.entity.Customer;
 import com.myshop.common.entity.User;
 import com.myshop.site.FileUploadUtils;
@@ -21,6 +22,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import javax.mail.MessagingException;
 import javax.mail.internet.MimeMessage;
 import javax.servlet.http.HttpServletRequest;
+import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 
 @Controller
@@ -100,14 +102,16 @@ public class CustomerController {
                            @AuthenticationPrincipal CustomerUserDetail loggedUser,
                            @RequestParam("fileImage") MultipartFile multipartFile,
                            RedirectAttributes redirectAttributes
-    ) {
+    ) throws IOException {
         if (!multipartFile.isEmpty()) {
             String fileName = multipartFile.getOriginalFilename();
             customer.setImage(fileName);
             Customer savedUser = customerService.saveAccount(customer);
-            String uploadDir = "../customers-photo/" + savedUser.getId();
-            FileUploadUtils.cleanDir(uploadDir);
-            FileUploadUtils.saveFile(uploadDir, fileName, multipartFile);
+            String uploadDir = "customers-photo/" + savedUser.getId();
+//            FileUploadUtils.cleanDir(uploadDir);
+//            FileUploadUtils.saveFile(uploadDir, fileName, multipartFile);
+            AmazonS3Util.removeFolder(uploadDir);
+            AmazonS3Util.uploadFile(uploadDir,fileName,multipartFile.getInputStream());
         } else {
             if (customer.getImage().isEmpty()) {
                 customer.setImage(null);
