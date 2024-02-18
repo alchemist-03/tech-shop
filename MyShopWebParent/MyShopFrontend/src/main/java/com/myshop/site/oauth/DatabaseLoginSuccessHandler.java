@@ -6,6 +6,7 @@ import com.myshop.site.customer.CustomerService;
 import com.myshop.site.security.CustomerUserDetail;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.web.authentication.SavedRequestAwareAuthenticationSuccessHandler;
 import org.springframework.stereotype.Component;
 
@@ -27,6 +28,7 @@ public class DatabaseLoginSuccessHandler extends SavedRequestAwareAuthentication
             throws ServletException, IOException {
         CustomerUserDetail customerUserDetail = (CustomerUserDetail) authentication.getPrincipal();
     Customer customer = customerUserDetail.getCustomer();
+//        Authentication authentication1 = SecurityContextHolder.getContext().getAuthentication();
         String email = customer.getEmail();
 
         Customer customerByEmail = customerService.getByEmail(email);

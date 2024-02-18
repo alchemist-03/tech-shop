@@ -5,47 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="377d3ae7-3cd0-42a8-acb0-7e40f972d135" name="Changes" comment="push first">
-
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopCommon/src/main/java/com/myshop/common/entity/AuthenticationType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopCommon/src/main/java/com/myshop/common/entity/Order.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopCommon/src/main/java/com/myshop/common/entity/OrderDetail.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopCommon/src/main/java/com/myshop/common/entity/OrderStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopCommon/src/main/java/com/myshop/common/entity/PaymentMethod.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/java/com/myshop/admin/order/OrderRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/java/com/myshop/site/customer/ForgotPasswordController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/java/com/myshop/site/oauth/CustomerOAuth2User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/java/com/myshop/site/oauth/CustomerOAuth2UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/java/com/myshop/site/oauth/DatabaseLoginSuccessHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/java/com/myshop/site/oauth/OAuth2LoginSuccessHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/resources/templates/customers/forgot_password_form.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/resources/templates/customers/reset_password_form.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/resources/templates/notification.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyShopCommon/src/main/java/com/myshop/common/entity/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/MyShopCommon/src/main/java/com/myshop/common/entity/Category.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyShopCommon/src/main/java/com/myshop/common/entity/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/MyShopCommon/src/main/java/com/myshop/common/entity/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/java/com/myshop/admin/customer/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/java/com/myshop/admin/customer/CustomerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/java/com/myshop/site/customer/CustomerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/java/com/myshop/site/customer/CustomerRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/java/com/myshop/site/customer/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/java/com/myshop/site/customer/CustomerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/java/com/myshop/site/security/CustomerUserDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/java/com/myshop/site/security/CustomerUserDetail.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/java/com/myshop/site/security/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/java/com/myshop/site/security/WebSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/resources/templates/customers/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/resources/templates/customers/register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/resources/templates/customers/verify_fail.html" beforeDir="false" afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/resources/templates/customers/verify_fail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/resources/templates/customers/verify_success.html" beforeDir="false" afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/resources/templates/customers/verify_success.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/resources/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/test/java/com/myshop/site/CustomerRepositoryTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/test/java/com/myshop/site/CustomerRepositoryTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Procfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/mydb.sql" beforeDir="false" afterPath="$PROJECT_DIR$/database/mydb.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system.properties" beforeDir="false" afterPath="$PROJECT_DIR$/system.properties" afterDir="false" />
-
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/java/com/myshop/site/customer/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/java/com/myshop/site/customer/CustomerController.java" afterDir="false" />
-
+      <change beforePath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/java/com/myshop/site/oauth/DatabaseLoginSuccessHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/java/com/myshop/site/oauth/DatabaseLoginSuccessHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/java/com/myshop/site/shoppingcart/ShoppingCartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/java/com/myshop/site/shoppingcart/ShoppingCartController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/java/com/myshop/site/shoppingcart/ShoppingCartRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/java/com/myshop/site/shoppingcart/ShoppingCartRestController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,10 +77,10 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Spring Boot.MyShopBackendApplication.executor": "Run",
-    "Spring Boot.MyShopFrontendApplication.executor": "Debug",
+    "Spring Boot.MyShopFrontendApplication.executor": "Run",
     "WebServerToolWindowFactoryState": "false",
     "extract.method.default.visibility": "private",
-    "git-widget-placeholder": "6617d235",
+    "git-widget-placeholder": "513b3312",
     "jdk.selected.JAVA_MODULE": "17",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "D:/workspace/java/tech-shop/MyShopWebParent/MyShopFrontend/src/main/resources/templates/customers",
@@ -175,7 +140,6 @@
     </option>
   </component>
   <component name="RunManager" selected="Spring Boot.MyShopFrontendApplication">
-
     <configuration name="Constants" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.myshop.common.Constants" />
       <module name="MyShopCommon" />
@@ -270,6 +234,7 @@
     </configuration>
     <list>
       <item itemvalue="Application.main" />
+      <item itemvalue="Application.Constants" />
       <item itemvalue="JUnit.CustomerRepositoryTests.testUpdateAuthenticationType" />
       <item itemvalue="JUnit.AmazonS3UtilTests.testDeleteFile" />
       <item itemvalue="JUnit.AmazonS3UtilTests.testRemoveFolder" />
@@ -349,15 +314,12 @@
       <workItem from="1697200073191" duration="59000" />
       <workItem from="1697200164393" duration="11723000" />
       <workItem from="1697278933047" duration="1644000" />
-
       <workItem from="1708144198324" duration="15672000" />
       <workItem from="1708218785524" duration="8587000" />
-
       <workItem from="1697386517547" duration="595000" />
       <workItem from="1697546319053" duration="868000" />
       <workItem from="1697549467387" duration="624000" />
       <workItem from="1697554367605" duration="557000" />
-
     </task>
     <task id="LOCAL-00001" summary="push first">
       <created>1695215767212</created>
@@ -442,6 +404,11 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="org.springframework.web.servlet.resource.ResourceUrlEncodingFilter$ResourceUrlEncodingRequestWrapper" memberName="prefixLookupPath" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
