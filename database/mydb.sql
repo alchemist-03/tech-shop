@@ -15,7 +15,9 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
-use j9d9yucrdoyldcno;
+
+use myshop;
+
 
 --
 -- Table structure for table `brands`
@@ -25,12 +27,21 @@ DROP TABLE IF EXISTS `brands`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `brands` (
+
+                          `id` int NOT NULL AUTO_INCREMENT,
+                          `logo` varchar(255) DEFAULT NULL,
+                          `name` varchar(255) NOT NULL,
+                          PRIMARY KEY (`id`),
+                          UNIQUE KEY `name_UNIQUE` (`name`)
+) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8mb4 ;
+
   `id` int NOT NULL AUTO_INCREMENT,
   `logo` varchar(255) DEFAULT NULL,
   `name` varchar(255) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `name_UNIQUE` (`name`)
 ) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -51,6 +62,15 @@ DROP TABLE IF EXISTS `brands_categories`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `brands_categories` (
+
+                                     `brand_id` int NOT NULL,
+                                     `category_id` int NOT NULL,
+                                     PRIMARY KEY (`brand_id`,`category_id`),
+                                     KEY `FK6x68tjj3eay19skqlhn7ls6ai` (`category_id`),
+                                     CONSTRAINT `FK58ksmicdguvu4d7b6yglgqvxo` FOREIGN KEY (`brand_id`) REFERENCES `brands` (`id`),
+                                     CONSTRAINT `FK6x68tjj3eay19skqlhn7ls6ai` FOREIGN KEY (`category_id`) REFERENCES `categories` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ;
+
   `brand_id` int NOT NULL,
   `category_id` int NOT NULL,
   PRIMARY KEY (`brand_id`,`category_id`),
@@ -78,6 +98,18 @@ DROP TABLE IF EXISTS `cart_items`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `cart_items` (
+
+                              `id` int NOT NULL AUTO_INCREMENT,
+                              `customer_id` int DEFAULT NULL,
+                              `product_id` int DEFAULT NULL,
+                              `quantity` int NOT NULL,
+                              PRIMARY KEY (`id`),
+                              KEY `FKdagcsk6v6x4n1kxw3rkp57921` (`customer_id`),
+                              KEY `FK1re40cjegsfvw58xrkdp6bac6` (`product_id`),
+                              CONSTRAINT `FK1re40cjegsfvw58xrkdp6bac6` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`),
+                              CONSTRAINT `FKdagcsk6v6x4n1kxw3rkp57921` FOREIGN KEY (`customer_id`) REFERENCES `customers` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8mb4 ;
+
   `id` int NOT NULL AUTO_INCREMENT,
   `customer_id` int DEFAULT NULL,
   `product_id` int DEFAULT NULL,
@@ -88,6 +120,7 @@ CREATE TABLE `cart_items` (
   CONSTRAINT `FK1re40cjegsfvw58xrkdp6bac6` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`),
   CONSTRAINT `FKdagcsk6v6x4n1kxw3rkp57921` FOREIGN KEY (`customer_id`) REFERENCES `customers` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -108,6 +141,21 @@ DROP TABLE IF EXISTS `categories`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `categories` (
+
+                              `id` int NOT NULL AUTO_INCREMENT,
+                              `name` varchar(128) NOT NULL,
+                              `alias` varchar(128) NOT NULL,
+                              `image` varchar(64) NOT NULL,
+                              `enabled` bit(1) NOT NULL,
+                              `parent_id` int DEFAULT NULL,
+                              `all_parent_ids` varchar(256) DEFAULT NULL,
+                              PRIMARY KEY (`id`),
+                              UNIQUE KEY `UK_jx1ptm0r46dop8v0o7nmgfbeq` (`alias`),
+                              UNIQUE KEY `UK_t8o6pivur7nn124jehx7cygw5` (`name`),
+                              KEY `FKsaok720gsu4u2wrgbk10b5n8d` (`parent_id`),
+                              CONSTRAINT `FKsaok720gsu4u2wrgbk10b5n8d` FOREIGN KEY (`parent_id`) REFERENCES `categories` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=34 DEFAULT CHARSET=utf8mb4 ;
+=======
   `id` int NOT NULL AUTO_INCREMENT,
   `name` varchar(128) NOT NULL,
   `alias` varchar(128) NOT NULL,
@@ -121,6 +169,7 @@ CREATE TABLE `categories` (
   KEY `FKsaok720gsu4u2wrgbk10b5n8d` (`parent_id`),
   CONSTRAINT `FKsaok720gsu4u2wrgbk10b5n8d` FOREIGN KEY (`parent_id`) REFERENCES `categories` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=34 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -141,6 +190,23 @@ DROP TABLE IF EXISTS `customers`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `customers` (
+
+                             `id` int NOT NULL AUTO_INCREMENT,
+                             `email` varchar(128) NOT NULL,
+                             `password` varchar(64) NOT NULL,
+                             `first_name` varchar(255) NOT NULL,
+                             `last_name` varchar(255) NOT NULL,
+                             `address` varchar(255) DEFAULT NULL,
+                             `image` varchar(255) DEFAULT NULL,
+                             `phone_number` varchar(255) DEFAULT NULL,
+                             `enabled` bit(1) NOT NULL,
+                             `verification_code` varchar(255) DEFAULT NULL,
+                             `created_at` datetime(6) DEFAULT NULL,
+                             `modified_at` datetime(6) DEFAULT NULL,
+                             PRIMARY KEY (`id`),
+                             UNIQUE KEY `UK_rfbvkrffamfql7cjmen8v976v` (`email`)
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 ;
+
   `id` int NOT NULL AUTO_INCREMENT,
   `email` varchar(128) NOT NULL,
   `password` varchar(64) NOT NULL,
@@ -156,6 +222,7 @@ CREATE TABLE `customers` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `UK_rfbvkrffamfql7cjmen8v976v` (`email`)
 ) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -176,6 +243,16 @@ DROP TABLE IF EXISTS `product_details`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `product_details` (
+
+                                   `id` int NOT NULL AUTO_INCREMENT,
+                                   `name` varchar(64) NOT NULL,
+                                   `value` varchar(128) NOT NULL,
+                                   `product_id` int DEFAULT NULL,
+                                   PRIMARY KEY (`id`),
+                                   KEY `FKnfvvq3meg4ha3u1bju9k4is3r` (`product_id`),
+                                   CONSTRAINT `FKnfvvq3meg4ha3u1bju9k4is3r` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=83 DEFAULT CHARSET=utf8mb4 ;
+
   `id` int NOT NULL AUTO_INCREMENT,
   `name` varchar(64) NOT NULL,
   `value` varchar(128) NOT NULL,
@@ -204,6 +281,14 @@ DROP TABLE IF EXISTS `product_images`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `product_images` (
+                                  `id` int NOT NULL AUTO_INCREMENT,
+                                  `name` varchar(256) DEFAULT NULL,
+                                  `product_id` int DEFAULT NULL,
+                                  PRIMARY KEY (`id`),
+                                  KEY `FKqnq71xsohugpqwf3c9gxmsuy` (`product_id`),
+                                  CONSTRAINT `FKqnq71xsohugpqwf3c9gxmsuy` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=64 DEFAULT CHARSET=utf8mb4 ;
+
   `id` int NOT NULL AUTO_INCREMENT,
   `name` varchar(256) DEFAULT NULL,
   `product_id` int DEFAULT NULL,
@@ -231,6 +316,31 @@ DROP TABLE IF EXISTS `products`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `products` (
+                            `id` int NOT NULL AUTO_INCREMENT,
+                            `name` varchar(512) NOT NULL,
+                            `alias` varchar(512) NOT NULL,
+                            `main_image` varchar(128) NOT NULL,
+                            `price` float NOT NULL,
+                            `list_price` float DEFAULT '0',
+                            `short_description` text,
+                            `full_description` text,
+                            `in_stock` bit(1) DEFAULT b'0',
+                            `enabled` bit(1) NOT NULL DEFAULT b'0',
+                            `discount_percent` float DEFAULT '0',
+                            `created_at` datetime(6) DEFAULT NULL,
+                            `modified_at` datetime(6) DEFAULT NULL,
+                            `brand_id` int DEFAULT NULL,
+                            `category_id` int DEFAULT NULL,
+                            PRIMARY KEY (`id`),
+                            UNIQUE KEY `UK_8qwq8q3hk7cxkp9gruxupnif5` (`alias`),
+                            UNIQUE KEY `UK_o61fmio5yukmmiqgnxf8pnavn` (`name`),
+                            KEY `FKa3a4mpsfdf4d2y6r8ra3sc8mv` (`brand_id`),
+                            KEY `FKog2rp4qthbtt2lfyhfo32lsw9` (`category_id`),
+                            FULLTEXT KEY `product_FTS` (`name`,`short_description`,`full_description`),
+                            CONSTRAINT `FKa3a4mpsfdf4d2y6r8ra3sc8mv` FOREIGN KEY (`brand_id`) REFERENCES `brands` (`id`),
+                            CONSTRAINT `FKog2rp4qthbtt2lfyhfo32lsw9` FOREIGN KEY (`category_id`) REFERENCES `categories` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb4 ;
+
   `id` int NOT NULL AUTO_INCREMENT,
   `name` varchar(512) NOT NULL,
   `alias` varchar(512) NOT NULL,
@@ -275,6 +385,12 @@ DROP TABLE IF EXISTS `roles`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `roles` (
+                         `id` int NOT NULL AUTO_INCREMENT,
+                         `name` varchar(64) NOT NULL,
+                         `description` varchar(564) NOT NULL,
+                         PRIMARY KEY (`id`),
+                         UNIQUE KEY `UK_ofx66keruapi6vyqpv6f2or37` (`name`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 ;
   `id` int NOT NULL AUTO_INCREMENT,
   `name` varchar(64) NOT NULL,
   `description` varchar(564) NOT NULL,
@@ -301,6 +417,14 @@ DROP TABLE IF EXISTS `settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `settings` (
+                            `id` int NOT NULL AUTO_INCREMENT,
+                            `category` varchar(255) DEFAULT NULL,
+                            `key` varchar(255) NOT NULL,
+                            `value` varchar(1024) NOT NULL,
+                            PRIMARY KEY (`id`),
+                            UNIQUE KEY `UK_lxci3mkgc9fvvdnq2qlx189cl` (`key`)
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 ;
+
   `id` int NOT NULL AUTO_INCREMENT,
   `category` varchar(255) DEFAULT NULL,
   `key` varchar(255) NOT NULL,
@@ -328,6 +452,17 @@ DROP TABLE IF EXISTS `users`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `users` (
+                         `id` int NOT NULL AUTO_INCREMENT,
+                         `email` varchar(128) NOT NULL,
+                         `enabled` bit(1) NOT NULL,
+                         `first_name` varchar(128) NOT NULL,
+                         `last_name` varchar(128) NOT NULL,
+                         `password` varchar(64) NOT NULL,
+                         `photo` varchar(256) DEFAULT NULL,
+                         PRIMARY KEY (`id`),
+                         UNIQUE KEY `UK_6dotkott2kjsp8vw4d0m25fb7` (`email`)
+) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8mb4 ;
+
   `id` int NOT NULL AUTO_INCREMENT,
   `email` varchar(128) NOT NULL,
   `enabled` bit(1) NOT NULL,
@@ -358,6 +493,14 @@ DROP TABLE IF EXISTS `users_roles`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `users_roles` (
+                               `user_id` int NOT NULL,
+                               `role_id` int NOT NULL,
+                               PRIMARY KEY (`user_id`,`role_id`),
+                               KEY `FKj6m8fwv7oqv74fcehir1a9ffy` (`role_id`),
+                               CONSTRAINT `FK2o0jvgh89lemvvo17cbqvdxaa` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`),
+                               CONSTRAINT `FKj6m8fwv7oqv74fcehir1a9ffy` FOREIGN KEY (`role_id`) REFERENCES `roles` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ;
+
   `user_id` int NOT NULL,
   `role_id` int NOT NULL,
   PRIMARY KEY (`user_id`,`role_id`),

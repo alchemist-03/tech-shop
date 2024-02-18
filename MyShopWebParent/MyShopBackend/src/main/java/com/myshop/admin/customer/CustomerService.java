@@ -61,6 +61,9 @@ public class CustomerService {
             encodePassword(customer);
         }
         customer.setEmail(customerInDB.getEmail());
+        customer.setVerificationCode(customerInDB.getVerificationCode());
+        customer.setAuthType(customerInDB.getAuthType());
+        customer.setResetPasswordToken(customerInDB.getResetPasswordToken());
         return customerRepository.save(customer);
     }
 

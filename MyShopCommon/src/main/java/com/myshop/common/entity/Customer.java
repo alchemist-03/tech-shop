@@ -26,10 +26,24 @@ public class Customer {
     private boolean enabled;
     private String image;
 
+    @Enumerated(EnumType.STRING)
+    @Column(name = "authentication_type",length = 10)
+    private AuthenticationType authType;
+
 
     private String address;
     @Column(name = "verification_code")
     private String verificationCode;
+
+    @Column(name="reset_password_token",length = 30)
+    private String resetPasswordToken;
+
+
+
+
+
+
+
     @Column(name = "created_at")
     private LocalDateTime createdAt;
     @Column(name = "modified_at")
@@ -49,11 +63,21 @@ public class Customer {
     public Customer() {
     }
 
+
+
     public Customer(String email, String password, String firstName, String lastName) {
         this.email = email;
         this.password = password;
         this.firstName = firstName;
         this.lastName = lastName;
+    }
+
+    public String getResetPasswordToken() {
+        return resetPasswordToken;
+    }
+
+    public void setResetPasswordToken(String resetPasswordToken) {
+        this.resetPasswordToken = resetPasswordToken;
     }
 
     public Integer getId() {
@@ -171,4 +195,9 @@ public class Customer {
         String timestamp = formatter.format(modifiedAt);
         return timestamp;
     }
+
+    public void setAuthType(AuthenticationType authType) {
+        this.authType = authType;
+    }
+    public AuthenticationType getAuthType() {return authType;}
 }
