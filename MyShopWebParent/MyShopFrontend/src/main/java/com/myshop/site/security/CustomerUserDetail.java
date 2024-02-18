@@ -66,4 +66,12 @@ public class CustomerUserDetail implements UserDetails {
     public void setAvatar (String imageUrl) {
         customer.setImage(imageUrl);
     }
+
+    public Customer getCustomer() {
+        return customer;
+    }
+
+//    public String getEmail() {
+//        return customer.getEmail();
+//    }
 }

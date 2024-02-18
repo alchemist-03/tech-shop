@@ -1,5 +1,6 @@
 package com.myshop.site;
 
+import com.myshop.common.entity.AuthenticationType;
 import com.myshop.common.entity.Customer;
 import com.myshop.site.customer.CustomerRepository;
 import org.assertj.core.api.Assertions;
@@ -42,5 +43,13 @@ public class CustomerRepositoryTests {
         Iterable<Customer> customers = repo.findAll();
         customers.forEach(System.out::println);
         Assertions.assertThat(customers).hasSize(2);
+    }
+
+    @Test
+    public void testUpdateAuthenticationType() {
+        Integer cusId = 1;
+        repo.updateAuthenticationType(cusId, AuthenticationType.DATABASE);
+        Customer customer = repo.findById(cusId).get();
+        Assertions.assertThat(customer.getAuthType()).isEqualTo(AuthenticationType.DATABASE);
     }
 }

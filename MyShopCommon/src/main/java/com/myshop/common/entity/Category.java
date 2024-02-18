@@ -123,6 +123,7 @@ public class Category {
         if(image==null) return "/images/no-image.jpg";
         return Constants.AWS_BASE_URI +"/categories-photo/"+id + "/" + image;
     }
+
     @Transient
     private boolean hasChildren;
 

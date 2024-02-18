@@ -1,5 +1,9 @@
 package com.myshop.site.security;
 
+import com.myshop.site.oauth.CustomerOAuth2UserService;
+import com.myshop.site.oauth.DatabaseLoginSuccessHandler;
+import com.myshop.site.oauth.OAuth2LoginSuccessHandler;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
@@ -15,6 +19,13 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 @Configuration
 @EnableWebSecurity
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
+
+    @Autowired
+    private CustomerOAuth2UserService oAuth2UserService;
+    @Autowired
+    private OAuth2LoginSuccessHandler oAuth2LoginSuccessHandler;
+    @Autowired
+    private DatabaseLoginSuccessHandler databaseLoginSuccessHandler;
     @Bean
     public UserDetailsService userDetailService() {
         return new CustomerUserDetailService();
@@ -27,10 +38,21 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.authorizeRequests().antMatchers("/customers").authenticated()
+        http.authorizeRequests()
+                .antMatchers("/customers").authenticated()
                 .anyRequest().permitAll()
                 .and()
-                .formLogin().loginPage("/login").usernameParameter("email").defaultSuccessUrl("/", true).permitAll()
+                .formLogin().loginPage("/login")
+                .usernameParameter("email")
+                .defaultSuccessUrl("/", true)
+                .successHandler(databaseLoginSuccessHandler)
+                .permitAll()
+                .and()
+                .oauth2Login().loginPage("/login")
+                .userInfoEndpoint()
+                .userService(oAuth2UserService)
+                .and()
+                .successHandler(oAuth2LoginSuccessHandler)
                 .and().logout()
                 .and().rememberMe().tokenValiditySeconds(7 * 24 * 60 * 60).key("abcdakljsdlflsajfl");
     }
@@ -45,8 +67,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-        // bruh
-        auth.userDetailsService(userDetailService());
+
+       // auth.userDetailsService(userDetailService());
         auth.authenticationProvider(authenticationProvider());
     }
 

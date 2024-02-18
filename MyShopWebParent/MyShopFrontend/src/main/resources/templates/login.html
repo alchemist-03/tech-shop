@@ -7,7 +7,7 @@
 
         <div >
             <p th:if="${param.error}" class="text-danger text-center">[[${session.SPRING_SECURITY_LAST_EXCEPTION.message}]]</p>
-            <p th:if="${param.logout}" class="text-info-emphasis text-center">You have been logout successfully!</p>
+            <p th:if="${param.logout}" class="text-success text-center">You have been logout successfully!</p>
         </div>
 
 
@@ -19,14 +19,50 @@
         <div class="mb-3">
             <label for="password" class="form-label">Password</label>
             <input type="password" class="form-control" id="password" name="password" placeholder="Your password...">
-            <div class="mb-3 mt-3 form-check" style="margin-left: 0">
-                <input type="checkbox" class="form-check-input" name="remember-me" id="remember-me" >
-                <label class="form-check-label" for="remember-me">Remember me</label>
+
+            <div class="row mb-4 flex align-items-center justify-content-between">
+
+                <div class="col d-flex justify-content-center">
+                    <div class="mb-3 mt-3 form-check" style="margin-left: 0">
+                        <input type="checkbox" class="form-check-input" name="remember-me" id="remember-me" >
+                        <label class="form-check-label" for="remember-me">Remember me</label>
+                    </div>
+                </div>
+                <div class="col">
+                    <!-- Simple link -->
+                    <a th:href="@{/forgot_password}">Forgot password?</a>
+                </div>
+
             </div>
+
         </div>
+           <div class="text-center">
+               <span>Do you have account? <a th:href="@{/register}" class="btn-switch">Sign up</a> </span>
+               <div class="text-center">Or continue with</div>
+               <a th:href="@{/oauth2/authorization/facebook}" class="btn btn-link btn-floating mx-1">
+                   <i class="fab fa-facebook-f"></i>
+               </a>
+
+               <a th:href="@{/oauth2/authorization/google}" class="btn btn-link btn-floating mx-1">
+                   <i class="fab fa-google"></i>
+               </a>
+
+               <button type="button" class="btn btn-link btn-floating mx-1">
+                   <i class="fab fa-twitter"></i>
+               </button>
+
+               <a th:href="@{/oauth2/authorization/github}"  class="btn btn-link btn-floating mx-1">
+                   <i class="fab fa-github"></i>
+               </a>
+               <div>
+
+               </div>
+           </div>
 
 
         <button type="submit" class="form-btn">Login now</button>
+
+
 
 
     </form>
