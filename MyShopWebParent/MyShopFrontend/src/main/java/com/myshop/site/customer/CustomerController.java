@@ -108,8 +108,7 @@ public class CustomerController {
             customer.setImage(fileName);
             Customer savedUser = customerService.saveAccount(customer);
             String uploadDir = "customers-photo/" + savedUser.getId();
-//            FileUploadUtils.cleanDir(uploadDir);
-//            FileUploadUtils.saveFile(uploadDir, fileName, multipartFile);
+
             AmazonS3Util.removeFolder(uploadDir);
             AmazonS3Util.uploadFile(uploadDir,fileName,multipartFile.getInputStream());
         } else {
@@ -125,7 +124,7 @@ public class CustomerController {
         loggedUser.setAvatar(customer.getImage());
         redirectAttributes.addFlashAttribute("message_success", "The customer has been saved successfully");
 
-        return "redirect:/customer/info";
+        return "redirect:/customers/info";
     }
 
 

@@ -72,8 +72,6 @@ public class CustomerController {
             customer.setImage(fileName);
             Customer savedUser = customerService.saveCustomer(customer);
             String uploadDir = "customers-photo/" + savedUser.getId();
-//            FileUploadUtils.cleanDir(uploadDir);
-//            FileUploadUtils.saveFile(uploadDir, fileName, multipartFile);
             AmazonS3Util.removeFolder(uploadDir);
             AmazonS3Util.uploadFile(uploadDir,fileName,multipartFile.getInputStream());
         } else {
