@@ -1,6 +1,7 @@
 package com.myshop.admin.product;
 
 import com.myshop.admin.FileUploadUtils;
+import com.myshop.admin.ListInfoUtils;
 import com.myshop.admin.brand.BrandService;
 import com.myshop.admin.export.ProductExportToCSV;
 import com.myshop.admin.export.ProductExportToEXCEL;
@@ -47,23 +48,10 @@ public class ProductController {
                              @RequestParam(value = "keyword",required = false) String keyword) {
 
         Page<Product> page = productService.listByPage(pageNum, sortField, sortDir, keyword);
-        List<Product> productList = page.getContent();
+        List<Product> list = page.getContent();
         int startCount = (pageNum - 1) * ProductService.PRODUCTS_PER_PAGE + 1;
         long endCount = startCount + ProductService.PRODUCTS_PER_PAGE - 1;
-        if(endCount > page.getTotalElements()) {
-            endCount = page.getTotalElements();
-        }
-        String reverseSortDir = sortDir.equals("asc") ? "desc" : "asc";
-        model.addAttribute("keyword",keyword);
-        model.addAttribute("reverseSortDir",reverseSortDir);
-        model.addAttribute("sortDir",sortDir);
-        model.addAttribute("sortField",sortField);
-        model.addAttribute("currentPage",pageNum);
-        model.addAttribute("startCount",startCount);
-        model.addAttribute("endCount",endCount);
-        model.addAttribute("totalPages",page.getTotalPages());
-        model.addAttribute("totalItems",page.getTotalElements());
-        model.addAttribute("productList",productList);
+        ListInfoUtils.setInfoList(model, pageNum, sortField, sortDir, keyword, endCount, page, startCount, list);
         return "products/products";
     }
 
@@ -169,7 +157,7 @@ public class ProductController {
 
         if(extraImgsMultipart.length>0) {
             String uploadDir = "products-photos/" + savedProduct.getId() + "/extras";
-//        not clean directory:-> delete handmade :deleteExtraImageWereRemoveOnForm()   FileUploadUtils.cleanDir(uploadDir);
+//        not clean directory:->  :deleteExtraImageWereRemoveOnForm()   FileUploadUtils.cleanDir(uploadDir);
             for(var multipart : extraImgsMultipart) {
                 if(!multipart.isEmpty() ) {
                     String fileName = StringUtils.cleanPath(multipart.getOriginalFilename());

@@ -15,6 +15,12 @@
 
         <div class="col-md-10 " th:unless="${#lists.isEmpty(cartItemList)}">
             <h2 class="order-header heading-topic heading-topic-sm" >Your shopping cart</h2>
+            <div>
+                <h3>Address which you can receive your items:</h3>
+                <p>[[${shippingAddress}]] <a th:href="@{/address_book}" class="text-success fw-medium">[ Choose another address ]</a></p>
+
+            </div>
+
             <table class="table table-order">
                 <thead>
                 <tr>
@@ -47,7 +53,7 @@
             </table>
             <span class="total-cost">Total: [[${costTotal}]]</span>
 
-            <button class="btn btn-primary " style=" float: right;margin-top: 30px;"> Confirm buy</button>
+            <a th:href="@{/checkout}" class="btn btn-primary " style=" float: right;margin-top: 30px;"> Check out</a>
         </div>
 
 

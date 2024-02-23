@@ -3,6 +3,10 @@ package com.myshop.site.setting;
 import com.myshop.common.Constants;
 import com.myshop.common.entity.Setting;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.oauth2.client.authentication.OAuth2AuthenticationToken;
+import org.springframework.security.oauth2.core.user.OAuth2User;
 import org.springframework.stereotype.Component;
 
 import javax.servlet.*;
@@ -22,9 +26,16 @@ public class SettingFilter implements Filter {
             chain.doFilter(request,response);
             return;
         }
+
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        boolean isOAuth2 = authentication != null && authentication.isAuthenticated()
+                && authentication.getPrincipal() instanceof OAuth2User;
+
+
         List<Setting> settingList = settingService.listGeneralSetting();
         settingList.forEach(setting -> servletRequest.setAttribute(setting.getKey(),setting.getValue()));
         request.setAttribute("AWS_BASE_URI", Constants.AWS_BASE_URI);
+        request.setAttribute("isOAuth2", isOAuth2);
         chain.doFilter(request, response);
     }
 }

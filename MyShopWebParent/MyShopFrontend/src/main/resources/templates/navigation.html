@@ -24,9 +24,16 @@
               <a class="nav-link text-white" th:href="@{/}">Notify&nbsp; </a>
             </li>
             <li class="nav-item" >
-              <a class="nav-link text-white" th:href="@{/cart}"><i class="fa-solid fa-cart-shopping"></i> &nbsp;Cart&nbsp; </a>
+              <a class="nav-link text-white" th:href="@{/carts}"><i class="fa-solid fa-cart-shopping"></i> &nbsp;Cart&nbsp; </a>
             </li>
 
+            <li class="nav-item" >
+              <a class="nav-link text-white" th:href="@{/address_book}"><i class="fa-solid fa-map-location-dot"></i> &nbsp;Your address book&nbsp; </a>
+            </li>
+
+            <li class="nav-item" >
+              <a class="nav-link text-white" th:href="@{/orders}"><i class="fa-solid fa-suitcase"></i> &nbsp;Orders&nbsp; </a>
+            </li>
 
 
 
@@ -55,10 +62,12 @@
               </div>
 
 
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                  <li><a class="dropdown-item" th:href="@{/customer/info}">Rectify your profile</a></li>
-                  <li><a class="dropdown-item" id="btn-logout" href="">Logout</a></li>
-                </ul>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <li th:if="${!isOAuth2}">
+                <a class="dropdown-item" th:href="@{/customers/info}">Rectify your profile</a>
+              </li>
+              <li><a class="dropdown-item" id="btn-logout" href="">Logout</a></li>
+            </ul>
 
           </div>
 

@@ -11,6 +11,8 @@ import javax.transaction.Transactional;
 import java.util.List;
 
 @Service
+@Transactional
+
 public class ShoppingCartService {
     @Autowired
     private CartItemRepository cartItemRepository;
@@ -40,7 +42,6 @@ public class ShoppingCartService {
     public List<CartItem> listCartItem(Customer customer) {
         return  cartItemRepository.findByCustomer(customer);
     }
-    @Transactional
 
     public Float updateQuantity(Customer customer,Integer productId,int quantity) {
         cartItemRepository.updateQuantity(customer, productId,quantity);
@@ -51,6 +52,10 @@ public class ShoppingCartService {
 
     public void removeCartItem(Integer id) {
         cartItemRepository.deleteById(id);
+    }
+
+    public void deleteByCustomer(Customer customer) {
+        cartItemRepository.deleteByCustomer(customer);
     }
 
 
