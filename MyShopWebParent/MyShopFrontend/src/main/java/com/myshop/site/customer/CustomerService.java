@@ -84,6 +84,7 @@ public class CustomerService {
         customer.setEnabled(true);
         customer.setCreatedAt(oldUser.getCreatedAt());
         customer.setResetPasswordToken(oldUser.getResetPasswordToken());
+        customer.setAuthType(oldUser.getAuthType());
         return customerRepo.save(customer);
     }
 

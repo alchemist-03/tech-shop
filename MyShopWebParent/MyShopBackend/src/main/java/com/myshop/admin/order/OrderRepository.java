@@ -5,11 +5,12 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.PagingAndSortingRepository;
 
-public interface OrderRepository extends JpaRepository<Order,Long> {
+public interface OrderRepository extends PagingAndSortingRepository<Order,Long> {
 
-    @Query("select o from Order o where o.firstName like ?2 or o.lastName like ?2" +
-            " or o.phoneNumber like ?2 or o.address like ?2 or o.status = ?2 or o.customer.firstName = ?2 or " +
-            "o.customer.lastName like ?2 ")
-    Page<Order> findAll(Pageable pageable,String keyword);
+    @Query("select o from Order o where o.firstName like ?1 or o.lastName like ?1" +
+            " or o.phoneNumber like ?1 or o.address like ?1 or o.status = ?1 or o.customer.firstName = ?1 or " +
+            "o.customer.lastName like ?1 ")
+    Page<Order> search(String keyword,Pageable pageable);
 }

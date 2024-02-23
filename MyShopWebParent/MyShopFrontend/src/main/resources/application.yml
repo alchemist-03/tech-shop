@@ -10,16 +10,16 @@ spring:
     hikari:
       minimum-idle: 1
       maximum-pool-size: 2
-    url: jdbc:mysql://localhost:3306/myshop
+    url: jdbc:mysql://db-tech-shop.c1uyawmgs9mn.ap-southeast-1.rds.amazonaws.com:3306/techshop
     username: root
-    password:
+    password: nam25012003
   jpa:
     hibernate:
       ddl-auto: update
     show-sql: false
-    # properties:
-    #   hibernate:
-    #     dialect: org.hibernate.dialect.MySQL8Dialect
+    properties:
+     hibernate:
+       dialect: org.hibernate.dialect.MySQL8Dialect
   security:
     oauth2:
       client:
