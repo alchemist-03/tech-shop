@@ -48,8 +48,6 @@ public class OAuth2LoginSuccessHandler extends SavedRequestAwareAuthenticationSu
     public AuthenticationType getAuthType(String clientName) {
         if(clientName.equals("Google")) {
             return AuthenticationType.GOOGLE;
-        }else if(clientName.equals("Facebook")) {
-            return AuthenticationType.FACEBOOK;
         }
         else return AuthenticationType.DATABASE;
     }

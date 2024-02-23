@@ -28,7 +28,6 @@ public class DatabaseLoginSuccessHandler extends SavedRequestAwareAuthentication
             throws ServletException, IOException {
         CustomerUserDetail customerUserDetail = (CustomerUserDetail) authentication.getPrincipal();
     Customer customer = customerUserDetail.getCustomer();
-//        Authentication authentication1 = SecurityContextHolder.getContext().getAuthentication();
         String email = customer.getEmail();
 
         Customer customerByEmail = customerService.getByEmail(email);

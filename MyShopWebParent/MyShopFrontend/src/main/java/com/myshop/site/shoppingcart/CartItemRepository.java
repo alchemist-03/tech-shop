@@ -17,4 +17,7 @@ public interface CartItemRepository extends CrudRepository<CartItem,Integer> {
     @Query("update CartItem c set c.quantity = ?3 where c.customer = ?1 and c.product.id = ?2")
     @Modifying
     void updateQuantity(Customer customer,Integer productId,int quantity);
+
+
+    void deleteByCustomer(Customer customer);
 }

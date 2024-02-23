@@ -41,7 +41,7 @@
             </tr>
             </thead>
             <tbody>
-            <tr th:each="customer : ${customerList}">
+            <tr th:each="customer : ${list}">
                 <th class="hidden-col" scope="row">[[${customer.id}]]</th>
                 <td>
                     <img th:src="@{${customer.imagePath}}" class="img-thumb">
@@ -66,7 +66,7 @@
         </table>
 
         <div class="show-info-sm">
-            <div th:each="customer : ${customerList}">
+            <div th:each="customer : ${list}">
                 <div style="display: flex;border-bottom: 1px solid #b4a3a3;padding:10px 0">
                     <img th:src="@{${customer.imagePath}}" class="img-thumb">
                     <div style="margin-left: 20px;">

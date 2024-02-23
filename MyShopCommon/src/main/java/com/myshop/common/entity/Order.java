@@ -1,5 +1,7 @@
 package com.myshop.common.entity;
 
+import org.hibernate.annotations.CreationTimestamp;
+
 import javax.persistence.*;
 import java.time.LocalDateTime;
 import java.util.HashSet;
@@ -21,15 +23,16 @@ public class Order {
     @Column(nullable = false)
     private String address;
     @Column(name = "order_time")
+    @CreationTimestamp
     private LocalDateTime orderTime;
 
-    @Column(name = "product_cost")
-    private float productCost;
+//    @Column(name = "product_cost")
+//    private float productCost;
     private float total;
 
     @Enumerated(EnumType.STRING)
     private PaymentMethod paymentMethod;
-    private int deliverDays;
+//    private int deliverDays;
     @Enumerated(EnumType.STRING)
 
     private OrderStatus status;
@@ -89,13 +92,6 @@ public class Order {
         this.orderTime = orderTime;
     }
 
-    public float getProductCost() {
-        return productCost;
-    }
-
-    public void setProductCost(float productCost) {
-        this.productCost = productCost;
-    }
 
     public float getTotal() {
         return total;
@@ -113,13 +109,6 @@ public class Order {
         this.paymentMethod = paymentMethod;
     }
 
-    public int getDeliverDays() {
-        return deliverDays;
-    }
-
-    public void setDeliverDays(int deliverDays) {
-        this.deliverDays = deliverDays;
-    }
 
     public OrderStatus getStatus() {
         return status;

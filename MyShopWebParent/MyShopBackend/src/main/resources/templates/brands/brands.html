@@ -36,7 +36,7 @@
            </tr>
            </thead>
            <tbody>
-           <tr th:each="brand : ${brandList}">
+           <tr th:each="brand : ${list}">
                <th class="hidden-col" scope="row">[[${brand.id}]]</th>
                <td>
                        <img th:src="@{${brand.imagePath}}" class="img-thumb" style="object-fit: contain">
@@ -57,7 +57,7 @@
        </table>
 
         <div class="show-info-sm">
-            <div th:each="brand : ${brandList}">
+            <div th:each="brand : ${list}">
               <div style="display: flex;border-bottom: 1px solid #b4a3a3;padding:10px 0">
                   <img th:src="@{${brand.imagePath}}" class="img-thumb">
                  <div style="margin-left: 20px;">

@@ -4,6 +4,9 @@
 <body class="bg-main">
     <div th:replace="navigation ::content('/products/search',true)"></div>
 
+    <div th:if="${message_error !=null}" class="alert alert-danger text-center" role="alert">
+        [[${message_error}]]
+    </div>
 <!--    carousel -->
     <div >
         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">

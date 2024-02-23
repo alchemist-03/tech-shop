@@ -1,6 +1,7 @@
 package com.myshop.admin.customer;
 
 import com.myshop.admin.FileUploadUtils;
+import com.myshop.admin.ListInfoUtils;
 import com.myshop.admin.export.CustomerExportToCSV;
 import com.myshop.admin.export.CustomerExportToEXCEL;
 import com.myshop.admin.export.UserExportToEXCEL;
@@ -28,32 +29,20 @@ public class CustomerController {
 
     @GetMapping("")
     public String listFirstPage(Model model) {
-        return lsitByPage(model, 1, "firstName", "asc", null);
+        return listByPage(model, 1, "firstName", "asc", null);
     }
 
     @GetMapping("/page/{pageNum}")
-    public String lsitByPage(Model model, @PathVariable("pageNum") int pageNum,
+    public String listByPage(Model model, @PathVariable("pageNum") int pageNum,
                              @RequestParam("sortField") String sortField,
                              @RequestParam("sortDir") String sortDir,
                              @RequestParam(value = "keyword", required = false) String keyword) {
         Page<Customer> page = customerService.listByPage(pageNum, sortField, sortDir, keyword);
-        List<Customer> customerList = page.getContent();
+        List<Customer> list = page.getContent();
         int startCount = (pageNum - 1) * CustomerService.CUSTOMERS_PER_PAGE + 1;
         long endCount = startCount + CustomerService.CUSTOMERS_PER_PAGE - 1;
-        if (endCount > page.getTotalElements()) {
-            endCount = page.getTotalElements();
-        }
-        String reverseSortDir = sortDir.equals("asc") ? "desc" : "asc";
-        model.addAttribute("keyword", keyword);
-        model.addAttribute("reverseSortDir", reverseSortDir);
-        model.addAttribute("sortDir", sortDir);
-        model.addAttribute("sortField", sortField);
-        model.addAttribute("currentPage", pageNum);
-        model.addAttribute("startCount", startCount);
-        model.addAttribute("endCount", endCount);
-        model.addAttribute("totalPages", page.getTotalPages());
-        model.addAttribute("totalItems", page.getTotalElements());
-        model.addAttribute("customerList", customerList);
+        ListInfoUtils.setInfoList(model, pageNum, sortField, sortDir, keyword, endCount, page, startCount, list);
+
 
         return "customers/customers";
     }

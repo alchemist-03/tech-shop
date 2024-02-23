@@ -1,6 +1,7 @@
 package com.myshop.admin.brand;
 
 import com.myshop.admin.FileUploadUtils;
+import com.myshop.admin.ListInfoUtils;
 import com.myshop.admin.category.CategoryService;
 import com.myshop.admin.export.BrandExportToEXCEL;
 import com.myshop.admin.export.CategoryExportToEXCEL;
@@ -41,23 +42,11 @@ public class BrandController {
                              @RequestParam(value = "keyword",required = false) String keyword) {
 
         Page<Brand> page = brandService.listByPage(pageNum,sortField,sortDir,keyword);
-        List<Brand> brandList = page.getContent();
+        List<Brand> list = page.getContent();
         int startCount = (pageNum - 1) * BrandService.BRAND_PER_PAGE + 1;
         long endCount = startCount + BrandService.BRAND_PER_PAGE - 1;
-        if(endCount > page.getTotalElements()) {
-            endCount = page.getTotalElements();
-        }
-        String reverseSortDir = sortDir.equals("asc") ? "desc" : "asc";
-        model.addAttribute("keyword",keyword);
-        model.addAttribute("reverseSortDir",reverseSortDir);
-        model.addAttribute("sortDir",sortDir);
-        model.addAttribute("sortField",sortField);
-        model.addAttribute("currentPage",pageNum);
-        model.addAttribute("startCount",startCount);
-        model.addAttribute("endCount",endCount);
-        model.addAttribute("totalPages",page.getTotalPages());
-        model.addAttribute("totalItems",page.getTotalElements());
-        model.addAttribute("brandList", brandList);
+        ListInfoUtils.setInfoList(model, pageNum, sortField, sortDir, keyword, endCount, page, startCount, list);
+
         return "brands/brands";
 
     }

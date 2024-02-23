@@ -1,8 +1,11 @@
 package com.myshop.site.shoppingcart;
 
+import com.myshop.common.entity.Address;
 import com.myshop.common.entity.CartItem;
 import com.myshop.common.entity.Customer;
 import com.myshop.common.exception.CustomerNotFoundException;
+import com.myshop.site.Utility;
+import com.myshop.site.address.AddressService;
 import com.myshop.site.customer.CustomerService;
 import com.myshop.site.oauth.CustomerOAuth2User;
 import com.myshop.site.security.CustomerUserDetail;
@@ -21,49 +24,42 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 @Controller
-@RequestMapping("/cart")
+@RequestMapping("/carts")
 public class ShoppingCartController {
 
 
     @Autowired private ShoppingCartService cartService;
     @Autowired private CustomerService customerService;
-    @GetMapping("")
-    public String listAll(Model model) throws CustomerNotFoundException {
 
-        List<CartItem> cartItemList = cartService.listCartItem(getAuthenticatedCustomer());
+    @Autowired private AddressService addressService;
+    @GetMapping("")
+    public String listAll(Model model)  {
+
+        List<CartItem> cartItemList = null;
+        try {
+            cartItemList = cartService.listCartItem(getAuthenticatedCustomer());
+            Customer customer = Utility.getCustomerLoggedIn(customerService );
+            Address defaultAddress = addressService.getDefaultAddress(customer);
+            String shippingAddress = defaultAddress!=null ? defaultAddress.toString() : customer.getFullAddress();
+            model.addAttribute("shippingAddress",shippingAddress);
         model.addAttribute("cartItemList",cartItemList);
+        } catch (CustomerNotFoundException e) {
+            return "/login";
+        }
         float costTotal = 0;
         for(var item : cartItemList) {
             costTotal +=item.getSubTotal();
         }
+
+
         model.addAttribute("costTotal",costTotal);
 
-        return "cart/shopping_cart";
+        return "carts/shopping_cart";
     }
 
     public Customer getAuthenticatedCustomer() throws CustomerNotFoundException {
-        return getCustomerLoggedIn(customerService);
+        return Utility.getCustomerLoggedIn(customerService);
     }
 
-    static Customer getCustomerLoggedIn(CustomerService customerService) throws CustomerNotFoundException {
-        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-        if (authentication != null && authentication.isAuthenticated()) {
-            Object principal = authentication.getPrincipal();
-            if (principal instanceof CustomerUserDetail) {
-                CustomerUserDetail customerUserDetail = (CustomerUserDetail) principal;
-                return customerUserDetail.getCustomer();
-            }else if(principal instanceof OAuth2User) {
-                CustomerOAuth2User oAuth2User = (CustomerOAuth2User) principal;
-                String email = oAuth2User.getEmail();
-                Customer customer = customerService.findByEmail(email);
-                return customer;
-            }
 
-            else {
-                throw new CustomerNotFoundException("No authenticated customer found");
-            }
-        } else {
-            throw new CustomerNotFoundException("No authenticated customer found");
-        }
-    }
 }

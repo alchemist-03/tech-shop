@@ -5,6 +5,8 @@ import com.myshop.common.Constants;
 import javax.persistence.*;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "customers")
@@ -40,6 +42,11 @@ public class Customer {
 
 
 
+    @OneToMany(mappedBy = "customer",cascade = CascadeType.ALL,orphanRemoval = true)
+    private List<Address> addressList = new ArrayList<>();
+
+
+
 
 
 
@@ -64,6 +71,13 @@ public class Customer {
     }
 
 
+    public List<Address> getAddressList() {
+        return addressList;
+    }
+
+    public void setAddressList(List<Address> addressList) {
+        this.addressList = addressList;
+    }
 
     public Customer(String email, String password, String firstName, String lastName) {
         this.email = email;
@@ -200,4 +214,18 @@ public class Customer {
         this.authType = authType;
     }
     public AuthenticationType getAuthType() {return authType;}
+
+
+    @Transient
+    public String getFullAddress() {
+        String fullAddress = firstName;
+        if(lastName != null && !lastName.isEmpty()) fullAddress += " " + lastName;
+        if(!address.isEmpty()) fullAddress+= ", " + address;
+        if(!phoneNumber.isEmpty()) fullAddress+= " .Phone number: " + phoneNumber;
+
+
+        return fullAddress;
+    }
+
+
 }

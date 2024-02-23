@@ -6,7 +6,7 @@
 
 <div class="container">
 
-    <form th:action="@{/customer/save}" th:object="${customer}" method="post" class="form form--lg" enctype="multipart/form-data">
+    <form th:action="@{/customers/save}" th:object="${customer}" method="post" class="form form--lg" enctype="multipart/form-data">
             <h3 class="form-heading">[[${pageTitle}]]</h3>
         <div>
             <div th:if="${message_success}" class="alert alert-success text-center" role="alert">

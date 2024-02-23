@@ -89,7 +89,7 @@ public class CustomerController {
         return "customers/"+ (isSuccess ? "verify_success": "verify_fail");
     }
 
-    @GetMapping("/customer/info")
+    @GetMapping("/customers/info")
     public String viewInfoAccount(Model model, @AuthenticationPrincipal CustomerUserDetail logged) {
         Customer customer = customerService.findByEmail(logged.getUsername());
         model.addAttribute("customer",customer);
@@ -97,7 +97,7 @@ public class CustomerController {
         return "customers/account_form";
     }
 
-    @PostMapping("/customer/save")
+    @PostMapping("/customers/save")
     public String saveUser(@ModelAttribute("customer") Customer customer,
                            @AuthenticationPrincipal CustomerUserDetail loggedUser,
                            @RequestParam("fileImage") MultipartFile multipartFile,
