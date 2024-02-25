@@ -37,8 +37,8 @@ public class OrderController {
     @GetMapping("/page/{pageNum}")
     public String listByPage(Model model,
                              @PathVariable(value = "pageNum") int pageNum,
-                             @RequestParam("sortField") String sortField,
-                             @RequestParam("sortDir") String sortDir,
+                             @RequestParam(value = "sortField",required = false,defaultValue = "orderTime") String sortField,
+                             @RequestParam(value = "sortDir",required = false,defaultValue = "asc") String sortDir,
                              @RequestParam(value = "keyword", required = false) String keyword) {
 
         try {

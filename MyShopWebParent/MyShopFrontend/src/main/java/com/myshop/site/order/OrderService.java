@@ -25,7 +25,7 @@ public class OrderService {
         Pageable pageable = PageRequest.of(pageNo- 1,PAGE_SIZE,sort);
         Page<Order> page;
         if(keyword!=null && !keyword.isEmpty()) {
-            page = orderRepo.findAll(pageable,keyword,customer.getId());
+            page = orderRepo.search(keyword,customer.getId(),pageable);
         }else {
             page = orderRepo.findAllByCustomer(pageable,customer);
         }

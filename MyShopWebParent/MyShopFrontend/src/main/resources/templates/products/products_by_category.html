@@ -43,5 +43,14 @@
 
 
 <footer th:replace="fragments:: footer"></footer>
+<div th:replace="fragments:: modal_notify"></div>
+
+
+<script th:src="@{/js/add_to_cart.js}"></script>
+<script>
+    contextPath = "[[@{/}]]";
+    csrfValue = "[[${_csrf.token}]]"
+    csrfHeader = "[[${_csrf.headerName}]]"
+</script>
 </body>
 </html>

@@ -220,10 +220,8 @@ public class Customer {
     public String getFullAddress() {
         String fullAddress = firstName;
         if(lastName != null && !lastName.isEmpty()) fullAddress += " " + lastName;
-        if(!address.isEmpty()) fullAddress+= ", " + address;
-        if(!phoneNumber.isEmpty()) fullAddress+= " .Phone number: " + phoneNumber;
-
-
+        if(address!=null && !address.isEmpty()) fullAddress+= ", " + address;
+        if(phoneNumber!=null && !phoneNumber.isEmpty()) fullAddress+= " .Phone number: " + phoneNumber;
         return fullAddress;
     }
 
