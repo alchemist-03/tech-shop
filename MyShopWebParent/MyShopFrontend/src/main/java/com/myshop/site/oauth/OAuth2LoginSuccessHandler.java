@@ -30,8 +30,8 @@ public class OAuth2LoginSuccessHandler extends SavedRequestAwareAuthenticationSu
         String name = oAuth2User.getName();
         String email = oAuth2User.getEmail();
         String clientName = oAuth2User.getClientName();
-        System.out.println("Client name: " + clientName);
-        System.out.println("onAuthenticationSuccess: name: " + name + " - email: " + email );
+//        System.out.println("Client name: " + clientName);
+//        System.out.println("onAuthenticationSuccess: name: " + name + " - email: " + email );
 
         AuthenticationType authType = getAuthType(clientName);
 

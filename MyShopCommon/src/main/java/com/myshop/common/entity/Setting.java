@@ -11,7 +11,7 @@ public class Setting {
     private Integer id;
     @Column(name = "`key`",length = 255, nullable = false, unique = true)
     private String key;
-    @Column(nullable = false)
+    @Column(nullable = false,columnDefinition = "TEXT")
     private String value;
 
     @Enumerated(EnumType.STRING)

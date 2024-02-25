@@ -4,20 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="377d3ae7-3cd0-42a8-acb0-7e40f972d135" name="Changes" comment="add address checkout and order">
+    <list default="true" id="377d3ae7-3cd0-42a8-acb0-7e40f972d135" name="Changes" comment="add amazon upload image, migrate db to Amazon RDS">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyShopCommon/src/main/java/com/myshop/common/AmazonS3Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/MyShopCommon/src/main/java/com/myshop/common/AmazonS3Util.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/java/com/myshop/admin/customer/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/java/com/myshop/admin/customer/CustomerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/java/com/myshop/admin/order/OrderRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/java/com/myshop/admin/order/OrderRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/java/com/myshop/admin/order/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/java/com/myshop/admin/order/OrderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyShopCommon/src/main/java/com/myshop/common/entity/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/MyShopCommon/src/main/java/com/myshop/common/entity/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyShopCommon/src/main/java/com/myshop/common/entity/Setting.java" beforeDir="false" afterPath="$PROJECT_DIR$/MyShopCommon/src/main/java/com/myshop/common/entity/Setting.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyShopCommon/src/test/java/AmazonS3UtilTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyShopCommon/src/test/java/Employee.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyShopCommon/src/test/java/ProcessInfo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyShopCommon/src/test/java/test.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/resources/templates/settings/settings.html" beforeDir="false" afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/resources/templates/settings/settings.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/java/com/myshop/site/customer/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/java/com/myshop/site/customer/CustomerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/java/com/myshop/site/customer/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/java/com/myshop/site/customer/CustomerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/java/com/myshop/site/oauth/OAuth2LoginSuccessHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/java/com/myshop/site/oauth/OAuth2LoginSuccessHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/java/com/myshop/site/order/OrderClientRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/java/com/myshop/site/order/OrderClientRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/java/com/myshop/site/order/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/java/com/myshop/site/order/OrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/java/com/myshop/site/order/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/java/com/myshop/site/order/OrderService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/resources/templates/fragments.html" beforeDir="false" afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/resources/templates/fragments.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/resources/templates/products/product_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/resources/templates/products/product_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyShopWebParent/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MyShopWebParent/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/resources/templates/products/products_by_category.html" beforeDir="false" afterPath="$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/resources/templates/products/products_by_category.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,6 +83,9 @@
     "JUnit.AddressRepositoryTests.testFindByCustomerIdAndAddressId.executor": "Run",
     "JUnit.CustomerRepositoryTests.testUpdateAuthenticationType.executor": "Run",
     "JUnit.OrderRepositoryTests.addAnOrder.executor": "Run",
+    "Maven.MyShop [clean].executor": "Run",
+    "Maven.MyShop [install].executor": "Run",
+    "Maven.MyShop [package].executor": "Run",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
@@ -88,13 +94,13 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Spring Boot.MyShopBackendApplication.executor": "Run",
-    "Spring Boot.MyShopFrontendApplication.executor": "Debug",
+    "Spring Boot.MyShopFrontendApplication.executor": "Run",
     "WebServerToolWindowFactoryState": "false",
     "extract.method.default.visibility": "private",
-    "git-widget-placeholder": "d0e4a894",
+    "git-widget-placeholder": "065afa06",
     "jdk.selected.JAVA_MODULE": "17",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/workspace/java/tech-shop/MyShopWebParent/MyShopFrontend/src/main/resources/templates",
+    "last_opened_file_path": "D:/workspace/java/tech-shop",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -109,7 +115,8 @@
   },
   "keyToStringList": {
     "DatabaseDriversLRU": [
-      "mariadb"
+      "mariadb",
+      "mysql"
     ]
   }
 }]]></component>
@@ -351,7 +358,9 @@
       <workItem from="1708668124938" duration="345000" />
       <workItem from="1708682293025" duration="4102000" />
       <workItem from="1708692197215" duration="2804000" />
-      <workItem from="1708702978570" duration="905000" />
+      <workItem from="1708702978570" duration="8447000" />
+      <workItem from="1708768762294" duration="2628000" />
+      <workItem from="1708837303086" duration="640000" />
     </task>
     <task id="LOCAL-00001" summary="push first">
       <created>1695215767212</created>
@@ -376,7 +385,15 @@
       <option name="project" value="LOCAL" />
       <updated>1708668364140</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="add amazon upload image, migrate db to Amazon RDS">
+      <option name="closed" value="true" />
+      <created>1708704206463</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1708704206463</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -417,7 +434,8 @@
     <MESSAGE value="push first" />
     <MESSAGE value="Fix the view cart item of logged in user." />
     <MESSAGE value="add address checkout and order" />
-    <option name="LAST_COMMIT_MESSAGE" value="add address checkout and order" />
+    <MESSAGE value="add amazon upload image, migrate db to Amazon RDS" />
+    <option name="LAST_COMMIT_MESSAGE" value="add amazon upload image, migrate db to Amazon RDS" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -456,6 +474,16 @@
           <url>file://$PROJECT_DIR$/MyShopWebParent/MyShopBackend/src/main/java/com/myshop/admin/product/ProductController.java</url>
           <line>239</line>
           <option name="timeStamp" value="34" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/java/com/myshop/site/customer/CustomerController.java</url>
+          <line>106</line>
+          <option name="timeStamp" value="35" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/MyShopWebParent/MyShopFrontend/src/main/java/com/myshop/site/customer/CustomerService.java</url>
+          <line>86</line>
+          <option name="timeStamp" value="36" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

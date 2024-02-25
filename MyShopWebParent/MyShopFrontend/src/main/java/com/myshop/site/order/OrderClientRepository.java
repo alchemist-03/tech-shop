@@ -9,10 +9,10 @@ import org.springframework.data.jpa.repository.Query;
 
 public interface OrderClientRepository extends JpaRepository<Order,Long> {
 
-    @Query("select o from Order o where o.customer.id = ?3 and (o.firstName like ?2 or o.lastName like ?2" +
-            " or o.phoneNumber like ?2 or o.address like ?2 or o.status = ?2 or o.customer.firstName = ?2 or " +
-            "o.customer.lastName like ?2 ) ")
-    Page<Order> findAll(Pageable pageable,String keyword,Integer customerId);
+    @Query("select o from Order o where o.customer.id = ?2 and (o.firstName like ?1 or o.lastName like ?1" +
+            " or o.phoneNumber like ?1 or o.address like ?1 or o.status = ?1 or o.customer.firstName = ?1 or " +
+            "o.customer.lastName like ?1 ) ")
+    Page<Order> search(String keyword,Integer customerId,Pageable pageable);
 
 //    @Query("select o from Order o where o.customer.id = ?2")
 //    Page<Order> findAllByCus(Pageable pageable,Integer customerId);
